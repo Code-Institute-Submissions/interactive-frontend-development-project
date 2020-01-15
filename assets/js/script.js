@@ -14,8 +14,8 @@ var dropDownSelection = document.getElementById("drop-down");
 
 
 function addUSC(){
-   uSC;
-   outputBox.innerHTML = totalTaxedPayedText + uSC; 
+   totalTax = uSC;
+   outputBox.innerHTML = totalTaxedPayedText + totalTax; 
 }
 
 function netPay(){
