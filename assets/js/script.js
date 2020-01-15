@@ -1,11 +1,29 @@
 var totalTax;
 var underthirtyFiveK;
 var overTwelveK;
+var taxCreditValue;
 var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 
 var outputBox = document.getElementById("income-tax-output");
 var optionSelection = document.getElementById("blank");
 var dropDownSelection = document.getElementById("drop-down");
+
+
+function taxCredits(){
+    let taxCreditValue = 0;
+    if(dropDownSelection.value = 'single'){
+        taxCreditValue = 3300;
+        totalTax = totalTax - taxCreditValue;
+        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
+    }
+    else if(dropDownSelection.value = 'married'){
+        taxCreditValue = 4950;
+    }
+    else if(dropDownSelection.value = 'civil-partner'){
+        taxCreditValue = 3300;
+    }   
+    return taxCreditValue;
+}
 
 function calcIncomeTaxed(){
     if(inputBox.value <= 13000 && dropDownSelection.value != optionSelection.value){
