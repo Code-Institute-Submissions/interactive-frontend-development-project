@@ -14,13 +14,20 @@ function taxCredits(){
     if(dropDownSelection.value = 'single'){
         taxCreditValue = 3300;
         totalTax = totalTax - taxCreditValue;
+        console.log(totalTax);
         outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
     }
     else if(dropDownSelection.value = 'married'){
         taxCreditValue = 4950;
+         totalTax = totalTax - taxCreditValue;
+        console.log(totalTax);
+        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
     }
     else if(dropDownSelection.value = 'civil-partner'){
         taxCreditValue = 3300;
+         totalTax = totalTax - taxCreditValue;
+        console.log(totalTax);
+        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
     }   
     return taxCreditValue;
 }
@@ -43,7 +50,9 @@ function calcIncomeTaxed(){
         underthirtyFiveK = inputBox.value * 0.20;
         totalTax = overTwelveK + underTwelveK + underthirtyFiveK;
         totalTax = totalTax.toFixed(2);
-        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
+        taxCredits();
+        return totalTax;
+        //outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
     }
     else if(inputBox.value >= 35000  && dropDownSelection.value != optionSelection.value){
         overTwelveK = inputBox.value - 12012;
@@ -56,7 +65,10 @@ function calcIncomeTaxed(){
         
         totalTax = overTwelveK + underTwelveK + underthirtyFiveK + overthirtyFiveK;
         totalTax = totalTax.toFixed(2);
-        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
+        console.log(totalTax);
+        taxCredits();
+        return totalTax;
+        //outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
     }
     
 }
