@@ -8,6 +8,7 @@ var totalTaxedPayedText = "Your total tax payed for the year is €";
 var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 
 var outputBox = document.getElementById("income-tax-output");
+var netPayOutputBox = document.getElementById("net-pay");
 var optionSelection = document.getElementById("blank");
 var dropDownSelection = document.getElementById("drop-down");
 
@@ -15,6 +16,12 @@ var dropDownSelection = document.getElementById("drop-down");
 function addUSC(){
    uSC;
    outputBox.innerHTML = totalTaxedPayedText + uSC; 
+}
+
+function netPay(){
+    let netPayText = "Your net pay for the year is: € ";
+    let netPay = inputBox.value - totalTax;
+    netPayOutputBox.innerHTML = netPayText + netPay; 
 }
 
 function taxCredits(){
@@ -108,5 +115,6 @@ function calcIncomeTaxed(){
 
 incomeTaxed.addEventListener("click", function(){
     calcIncomeTaxed();
+    netPay();
 }); 
 
