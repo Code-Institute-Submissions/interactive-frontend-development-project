@@ -15,19 +15,19 @@ function taxCredits(){
     if(dropDownSelection.value == "single"){
         taxCreditValue = 3300;
         totalTax = totalTax - taxCreditValue;
-        console.log("Single" + totalTax);
+        totalTax = totalTax.toFixed(2);
         outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
     }
     else if(dropDownSelection.value == "married"){
         taxCreditValue = 4950;
-         totalTax = totalTax - taxCreditValue;
-        console.log("Married" + totalTax);
+        totalTax = totalTax - taxCreditValue;
+        totalTax = totalTax.toFixed(2);
         outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
     }
-    else if(dropDownSelection.value = "civil-partner"){
+    else if(dropDownSelection.value == "civil-partner"){
         taxCreditValue = 3300;
-         totalTax = totalTax - taxCreditValue;
-        console.log("Civil" + totalTax);
+        totalTax = totalTax - taxCreditValue;
+        totalTax = totalTax.toFixed(2);
         outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
     }   
     return taxCreditValue;
@@ -41,6 +41,7 @@ function calcIncomeTaxed(){
         underTwelveK = 12012 * 0.005;
         totalTax = overTwelveK + underTwelveK;
         totalTax = totalTax.toFixed(2);
+        console.log("under13K" + totalTax);
         outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
     }
     else if(inputBox.value < 35000 && inputBox.value > 13000  && dropDownSelection.value != optionSelection.value){
@@ -51,9 +52,8 @@ function calcIncomeTaxed(){
         underthirtyFiveK = inputBox.value * 0.20;
         totalTax = overTwelveK + underTwelveK + underthirtyFiveK;
         totalTax = totalTax.toFixed(2);
+        console.log("under35K and over 13K" + totalTax);
         taxCredits();
-        return totalTax;
-        //outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
     }
     else if(inputBox.value >= 35000  && dropDownSelection.value != optionSelection.value){
         overTwelveK = inputBox.value - 12012;
@@ -66,10 +66,8 @@ function calcIncomeTaxed(){
         
         totalTax = overTwelveK + underTwelveK + underthirtyFiveK + overthirtyFiveK;
         totalTax = totalTax.toFixed(2);
-        console.log(totalTax);
+        console.log("over35K"+ totalTax);
         taxCredits();
-        return totalTax;
-        //outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
     }
     
 }
