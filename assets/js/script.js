@@ -11,22 +11,23 @@ var dropDownSelection = document.getElementById("drop-down");
 
 function taxCredits(){
     let taxCreditValue = 0;
-    if(dropDownSelection.value = 'single'){
+
+    if(dropDownSelection.value == "single"){
         taxCreditValue = 3300;
         totalTax = totalTax - taxCreditValue;
-        console.log(totalTax);
+        console.log("Single" + totalTax);
         outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
     }
-    else if(dropDownSelection.value = 'married'){
+    else if(dropDownSelection.value == "married"){
         taxCreditValue = 4950;
          totalTax = totalTax - taxCreditValue;
-        console.log(totalTax);
+        console.log("Married" + totalTax);
         outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
     }
-    else if(dropDownSelection.value = 'civil-partner'){
+    else if(dropDownSelection.value = "civil-partner"){
         taxCreditValue = 3300;
          totalTax = totalTax - taxCreditValue;
-        console.log(totalTax);
+        console.log("Civil" + totalTax);
         outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
     }   
     return taxCreditValue;
