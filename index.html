@@ -3,15 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <title>Edmund O Callaghan - Interactive Front End Development</title>
-     
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   </head>
   <body>
      <form>
         <input id="income-input" type="text" name="income-per-year">
+        <select id="drop-down">
+            <option id="blank" value="">required</option>
+            <option id="single-option" value="single">Single</option>
+            <option id="married-option"value="married">Married</option>
+            <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
+        </select> 
         <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Click">Calculate Income Taxed</button>
         <input id="net-income-btn" type="button" name="calculate-net-income" value="Click">Calculate Take Home Pay</button>
         <p id="income-tax-output">Output</p>
     </form>
+    
     <script type="text/javascript" src="assets/js/script.js"></script>
   </body>
 </html>
