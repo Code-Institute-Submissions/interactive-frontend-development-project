@@ -1,13 +1,19 @@
-var totalTax;
+var totalTax = 0;
 var underthirtyFiveK;
 var overTwelveK;
 var taxCreditValue;
+var totalTaxedPayedText = "Your total tax payed for the year is €";
 var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 
 var outputBox = document.getElementById("income-tax-output");
 var optionSelection = document.getElementById("blank");
 var dropDownSelection = document.getElementById("drop-down");
 
+
+function ifValueIsNegative(){
+   totalTax = 0;
+    outputBox.innerHTML = totalTaxedPayedText + totalTax; 
+}
 
 function taxCredits(){
     let taxCreditValue = 0;
@@ -16,25 +22,45 @@ function taxCredits(){
         taxCreditValue = 3300;
         totalTax = totalTax - taxCreditValue;
         totalTax = totalTax.toFixed(2);
-        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
+        if(totalTax < 0){
+            ifValueIsNegative();
+        }
+        else{
+            outputBox.innerHTML = totalTaxedPayedText + totalTax;
+        }
     }
     else if(dropDownSelection.value == "married"){
         taxCreditValue = 4950;
         totalTax = totalTax - taxCreditValue;
         totalTax = totalTax.toFixed(2);
-        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
+        if(totalTax < 0){
+            ifValueIsNegative();
+        }
+        else{
+            outputBox.innerHTML = totalTaxedPayedText + totalTax;
+        }
     }
     else if(dropDownSelection.value == "civil-partner"){
         taxCreditValue = 3300;
         totalTax = totalTax - taxCreditValue;
         totalTax = totalTax.toFixed(2);
-        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax;
+        if(totalTax < 0){
+            ifValueIsNegative();
+        }
+        else{
+            outputBox.innerHTML = totalTaxedPayedText + totalTax;
+        }
     }   
     return taxCreditValue;
 }
 
 function calcIncomeTaxed(){
-    if(inputBox.value <= 13000 && dropDownSelection.value != optionSelection.value){
+
+    if(inputBox.value <= 9009 && dropDownSelection.value != optionSelection.value){
+        outputBox.innerHTML = totalTaxedPayedText + totalTax; 
+    }
+
+    else if(inputBox.value <= 13000 && dropDownSelection.value != optionSelection.value){
         overTwelveK = inputBox.value - 12012;
         overTwelveK = overTwelveK * 0.02;
 
@@ -42,7 +68,7 @@ function calcIncomeTaxed(){
         totalTax = overTwelveK + underTwelveK;
         totalTax = totalTax.toFixed(2);
         console.log("under13K" + totalTax);
-        outputBox.innerHTML = "Your total taxed amount for the year is €" + totalTax; 
+        outputBox.innerHTML = totalTaxedPayedText + totalTax; 
     }
     else if(inputBox.value < 35000 && inputBox.value > 13000  && dropDownSelection.value != optionSelection.value){
         overTwelveK = inputBox.value - 12012;
