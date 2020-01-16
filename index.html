@@ -20,7 +20,7 @@
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
-        <button class="tab-decoration btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="tab-decoration btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           INCOME TAX CALCULATOR
         </button>
       </h5>
@@ -29,10 +29,13 @@
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <form>
-            <span id="yearly-salary"> Input your yearly salary here: <input id="income-input" type="text" name="income-per-year" value=""></span>
+            <P class="small-print-text">any option marked with an * is required.</P>
+            <span id="yearly-salary"><i class="fas fa-euro-sign"></i> Input your yearly salary here:</span> 
+            <input id="income-input" type="text" name="income-per-year" value="€">
+
+            <p><i class="far fa-question-circle"></i>  Please Choose an option</p>
             <select id="drop-down">
-            
-                <option id="blank" value="">required</option>
+                <option id="blank" value="">Marital Status*</option>
                 <option id="single-option" value="single">Single</option>
                 <option id="married-option"value="married">Married</option>
                 <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
