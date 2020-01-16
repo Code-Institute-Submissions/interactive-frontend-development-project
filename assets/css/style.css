@@ -1,0 +1,29 @@
+
+
+input, select {
+  width: 100%;
+  margin-top: 10px;
+}
+p {
+    padding-top: 20px;
+}
+
+.card-body{
+    font-family: 'Teko', sans-serif;
+    font-size: 1.4em;
+}
+
+.tab-decoration{
+    font-family: 'Audiowide', cursive;
+}
+
+@media only screen and (min-width: 600px) {
+  #accordion {
+    max-width: 600px;
+    margin: auto;
+    }
+   body{
+        background: rgb(44,44,52);
+        background: linear-gradient(243deg, rgba(44,44,52,1) 37%, rgba(83,180,187,1) 89%, rgba(0,212,255,1) 100%);
+   }   
+}

@@ -4,7 +4,7 @@ var overTwelveK;
 var underTwelveK;
 var taxCreditValue;
 var uSC = overTwelveK + underTwelveK;
-var totalTaxedPayedText = "Your total tax payed for the year is €";
+var totalTaxedPayedText = "Your total tax payed for the year is: € ";
 var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 
 var outputBox = document.getElementById("income-tax-output");
