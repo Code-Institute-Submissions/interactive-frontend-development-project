@@ -15,19 +15,6 @@
 	<link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <div class="app-container">
-        <form>
-            <input id="income-input" type="text" name="income-per-year">
-            <select id="drop-down">
-                <option id="blank" value="">required</option>
-                <option id="single-option" value="single">Single</option>
-                <option id="married-option"value="married">Married</option>
-                <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
-            </select> 
-            <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Click">Calculate Income Taxed</button>
-            <p id="income-tax-output">Taxed Amount Output</p>
-            <p id="net-pay">Net Pay Output</p>
-        </form>
 
 <div id="accordion">
   <div class="card">
@@ -41,7 +28,19 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        <form>
+            <span id="yearly-salary"> Input your yearly salary here: <input id="income-input" type="text" name="income-per-year" value=""></span>
+            <select id="drop-down">
+            
+                <option id="blank" value="">required</option>
+                <option id="single-option" value="single">Single</option>
+                <option id="married-option"value="married">Married</option>
+                <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
+            </select> 
+            <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate Tax & Net Pay"></button>
+            <p id="income-tax-output">Taxed Amount Output</p>
+            <p id="net-pay">Net Pay Output</p>
+        </form>
       </div>
     </div>
   </div>
@@ -89,7 +88,7 @@
   </div>
 </div>
 
-    </div>
+   
     <!--Should be set in order as follows: jquery, popper.js, then bootstrap.js-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
