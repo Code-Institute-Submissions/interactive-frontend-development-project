@@ -19,9 +19,11 @@ function addUSC(){
 }
 
 function netPay(){
-    let netPayText = "Your net pay for the year is: € ";
-    let netPay = inputBox.value - totalTax;
-    netPayOutputBox.innerHTML = netPayText + netPay; 
+    if(dropDownSelection.value != optionSelection.value){
+         let netPayText = "Your net pay for the year is: € ";
+        let netPay = inputBox.value - totalTax;
+        netPayOutputBox.innerHTML = netPayText + netPay; 
+    }
 }
 
 function taxCredits(){
