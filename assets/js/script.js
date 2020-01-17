@@ -29,7 +29,7 @@ function netPay(){
         if(dropDownSelection.value != optionSelection.value){
         let netPayText = "Your net pay for the year is: € ";
         let netPay = inputBoxValue - totalTax;
-        console.log(netPay);
+        netPay = netPay.toFixed(2);
         netPayOutputBox.innerHTML = netPayText + netPay; 
     }
 }
@@ -83,7 +83,7 @@ function calcIncomeTaxed(){
     if(inputBoxValue <= 12012 && dropDownSelection.value != optionSelection.value){
         underTwelveK = inputBoxValue * 0.005;
         totalTax = underTwelveK;
-        
+        totalTax = totalTax.toFixed(2);
         outputBox.innerHTML = totalTaxedPayedText + totalTax; 
     }
 
