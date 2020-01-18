@@ -13,11 +13,14 @@ var optionSelection = document.getElementById("blank");
 var dropDownSelection = document.getElementById("drop-down");
 
 
-window.onload = () => {
-  var euroCurrency = "€";
-  inputBox.value = euroCurrency;
-};
 
+function weeklyPay(){
+    let weeklyPayText = "Your weekly pay for the year is: € ";
+    let weeklyPayOutput = document.getElementById("weekly-pay");
+    let weeklyPay = netPay.netPay / 52;
+    weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toString();; 
+    console.log(weeklyPay);
+}
 
 function addUSC(){
    totalTax = uSC;
@@ -25,7 +28,7 @@ function addUSC(){
 }
 
 function netPay(){
-    let inputBoxValue = parseFloat(inputBox.value.replace(",", "").substr(1));
+    let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
         if(dropDownSelection.value != optionSelection.value){
         let netPayText = "Your net pay for the year is: € ";
         let netPay = inputBoxValue - totalTax;
@@ -78,7 +81,7 @@ function taxCredits(){
 }
 
 function calcIncomeTaxed(){
-    let inputBoxValue = parseFloat(inputBox.value.replace(",", "").substr(1));
+    let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
 
     if(inputBoxValue <= 12012 && dropDownSelection.value != optionSelection.value){
         underTwelveK = inputBoxValue * 0.005;
@@ -127,8 +130,8 @@ function calcIncomeTaxed(){
 }
 
 incomeTaxed.addEventListener("click", function(){
-    
     calcIncomeTaxed();
     netPay();
+    weeklyPay();
 }); 
 
