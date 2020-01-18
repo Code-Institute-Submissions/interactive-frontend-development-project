@@ -13,7 +13,7 @@ var optionSelection = document.getElementById("blank");
 var dropDownSelection = document.getElementById("drop-down");
 
 
-
+// This calculates the rate of pay per week after tax.
 function weeklyPay(){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
     let weeklyPayText = "Your weekly pay for the year is: € ";
@@ -24,11 +24,13 @@ function weeklyPay(){
     weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toFixed(2); 
 }
 
+// This calculates the usc charge.
 function addUSC(){
    totalTax = uSC;
    outputBox.innerHTML = totalTaxedPayedText + totalTax; 
 }
 
+//This function calculates the net pay after tax's owed. 
 function netPay(){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
         if(dropDownSelection.value != optionSelection.value){
@@ -39,6 +41,7 @@ function netPay(){
     }
 }
 
+// This takes tax credits from your total tax owed, if applicable. Those under 13,000 euro are exempt from tax, thus not applicable.
 function taxCredits(){
     let taxCreditValue = 0;
 
@@ -82,6 +85,7 @@ function taxCredits(){
     return taxCreditValue;
 }
 
+// This calculates rate of tax & usc depending on your income from 12,012 to 35,000 or more, those under 13,000 are exempt from tax, but not usc.
 function calcIncomeTaxed(){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
 
@@ -130,7 +134,7 @@ function calcIncomeTaxed(){
     }
     
 }
-
+// function controller
 incomeTaxed.addEventListener("click", function(){
     calcIncomeTaxed();
     netPay();
