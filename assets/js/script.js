@@ -15,11 +15,13 @@ var dropDownSelection = document.getElementById("drop-down");
 
 
 function weeklyPay(){
+    let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
     let weeklyPayText = "Your weekly pay for the year is: € ";
     let weeklyPayOutput = document.getElementById("weekly-pay");
-    let weeklyPay = netPay.netPay / 52;
-    weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toString();; 
-    console.log(weeklyPay);
+    let weeklyPay = inputBoxValue - totalTax;
+    weeklyPay = weeklyPay / 52;
+
+    weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toFixed(2); 
 }
 
 function addUSC(){
