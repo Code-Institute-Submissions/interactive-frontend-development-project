@@ -57,6 +57,7 @@ i{
 #income-tax-output{
     padding-top: 20px;
 }
+
 /*--------------------------------------------Media queries*/
 @media only screen and (min-width: 600px) {
   body {
