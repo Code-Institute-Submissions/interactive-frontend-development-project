@@ -8,12 +8,12 @@ var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 
 var outputBox = document.getElementById("income-tax-output");
 var netPayOutputBox = document.getElementById("net-pay");
-var optionSelection = document.getElementById("blank");
+var optionSelectionEmpty = document.getElementById("blank");
 var dropDownSelection = document.getElementById("drop-down");
 
 
 // This calculates the rate of pay per week after tax.
-function weeklyPay(){
+function weeklyPay(totalTax){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
     let weeklyPayText = "Your weekly pay for the year is: € ";
     let weeklyPayOutput = document.getElementById("weekly-pay");
@@ -29,9 +29,9 @@ function addUSC(){
 }
 
 //This function calculates the net pay after tax's owed. 
-function netPay(){
+function netPay(totalTax){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
-        if(dropDownSelection.value != optionSelection.value){
+        if(dropDownSelection.value != optionSelectionEmpty.value){
         let netPayText = "Your net pay for the year is: € ";
         let netPay = inputBoxValue - totalTax;
         netPay = netPay.toFixed(2);
@@ -40,64 +40,33 @@ function netPay(){
 }
 
 // This takes tax credits from your total tax owed, if applicable. Those under 13,000 euro are exempt from tax, thus not applicable.
-function taxCredits(totalTax){
+function taxCredits(){
     let taxCreditValue;
 
-    if(dropDownSelection.value == "single"){
-        taxCreditValue = 3300;
-        uSC = overTwelveK + underTwelveK;
-        totalTax -= taxCreditValue;
-        totalTax += uSC;
-        totalTax = totalTax.toFixed(2);
-        if(totalTax < 0){
-            addUSC();
-        }
-        else{
-            outputBox.innerHTML = totalTaxedPayedText + totalTax;
-        }
+    if(dropDownSelection.value == "single" || dropDownSelection.value == "civil-partner"){
+         taxCreditValue = 3300;
+
     }
     else if(dropDownSelection.value == "married"){
-        taxCreditValue = 4950;
-        uSC = overTwelveK + underTwelveK;
-        totalTax -= taxCreditValue;
-        totalTax += uSC;
-        totalTax = totalTax.toFixed(2);
-        if(totalTax < 0){
-            addUSC();
-        }
-        else{
-            outputBox.innerHTML = totalTaxedPayedText + totalTax;
-        }
+         taxCreditValue = 4950;
+        
     }
-    else if(dropDownSelection.value == "civil-partner"){
-        taxCreditValue = 3300;
-        uSC = overTwelveK + underTwelveK;
-        totalTax -= taxCreditValue;
-        totalTax += uSC;
-        totalTax = totalTax.toFixed(2);
-        if(totalTax < 0){
-            totalTax += addUSC();
-        }
-        else{
-            outputBox.innerHTML = totalTaxedPayedText + totalTax;
-        }
-    }   
-    
+    return taxCreditValue;
 }
 
 // This calculates rate of tax & usc depending on your income from 12,012 to 35,000 or more, those under 13,000 are exempt from tax, but not usc.
 function calcIncomeTaxed(){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
-    let totalTax;
+    let totalTax = 0;
 
-    if(inputBoxValue <= 12012 && dropDownSelection.value != optionSelection.value){
+    if(inputBoxValue <= 12012 && dropDownSelection.value != optionSelectionEmpty.value){
         underTwelveK = inputBoxValue * 0.005;
         totalTax = underTwelveK;
         totalTax = totalTax.toFixed(2);
         outputBox.innerHTML = totalTaxedPayedText + totalTax; 
     }
 
-    else if(inputBoxValue <= 13000 && dropDownSelection.value != optionSelection.value){
+    else if(inputBoxValue <= 13000 && dropDownSelection.value != optionSelectionEmpty.value){
         overTwelveK = inputBoxValue - 12012;
         overTwelveK = overTwelveK * 0.02;
 
@@ -107,18 +76,26 @@ function calcIncomeTaxed(){
         
         outputBox.innerHTML = totalTaxedPayedText + totalTax; 
     }
-    else if(inputBoxValue < 35000 && inputBoxValue > 13000  && dropDownSelection.value != optionSelection.value){
+    else if(inputBoxValue < 35000 && inputBoxValue > 13000  && dropDownSelection.value != optionSelectionEmpty.value){
         overTwelveK = inputBoxValue - 12012;
         overTwelveK = overTwelveK * 0.02;
         underTwelveK = 12012 * 0.005;
         
         underthirtyFiveK = inputBoxValue * 0.20;
         totalTax = overTwelveK + underTwelveK + underthirtyFiveK;
-        totalTax = totalTax.toFixed(2);
         
-        taxCredits();
+        uSC = overTwelveK + underTwelveK;
+        totalTax -= taxCredits();
+        totalTax += uSC;
+        totalTax = totalTax
+        if(totalTax < 0){
+            outputBox.innerHTML = totalTaxedPayedText + uSC;
+        }
+        else{
+            outputBox.innerHTML = totalTaxedPayedText + totalTax;
+        }
     }
-    else if(inputBoxValue >= 35000  && dropDownSelection.value != optionSelection.value){
+    else if(inputBoxValue >= 35000  && dropDownSelection.value != optionSelectionEmpty.value){
         overTwelveK = inputBoxValue - 12012;
         overTwelveK = overTwelveK * 0.02;
         underTwelveK = 12012 * 0.005;
@@ -128,10 +105,17 @@ function calcIncomeTaxed(){
         overthirtyFiveK = overthirtyFiveK * 0.40;
         
         totalTax = overTwelveK + underTwelveK + underthirtyFiveK + overthirtyFiveK;
-        totalTax = totalTax.toFixed(2);
-       
-        taxCredits();
         
+        uSC = overTwelveK + underTwelveK;
+        totalTax -= taxCredits();
+        totalTax += uSC;
+        totalTax = totalTax
+        if(totalTax < 0){
+            outputBox.innerHTML = totalTaxedPayedText + uSC;
+        }
+        else{
+            outputBox.innerHTML = totalTaxedPayedText + totalTax;
+        }
     }
     return totalTax;
 }
