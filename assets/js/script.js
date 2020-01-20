@@ -4,6 +4,7 @@ var underTwelveK;
 var taxCreditValue;
 var uSC = overTwelveK + underTwelveK;
 var totalTaxedPayedText = "Your total tax payed for the year is: € ";
+var invalid
 var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 
 var outputBox = document.getElementById("income-tax-output");
@@ -20,8 +21,7 @@ function weeklyPay(totalTax){
         let weeklyPayOutput = document.getElementById("weekly-pay");
         let weeklyPay = inputBoxValue - totalTax;
         weeklyPay = weeklyPay / 52;
-
-        weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toFixed(2); 
+        weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toFixed(2);
     }
 }
 
@@ -118,9 +118,16 @@ function calcIncomeTaxed(){
 }
 // button listener
 incomeTaxed.addEventListener("click", function(){
-    // setting a variable to be the returned value of the function that it is equals to.
-    let taxValueReturned = calcIncomeTaxed();
-    netPay(taxValueReturned);
-    weeklyPay(taxValueReturned);
+
+            let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
+            if (isNaN(inputBoxValue) && dropDownSelection.value != optionSelectionEmpty.value) {
+                outputBox.innerHTML = "Invalid Input... Try numbers only";
+            }
+            else if(dropDownSelection.value != optionSelectionEmpty.value){
+                // setting a variable to be the returned value of the function that it is equals to.
+                let taxValueReturned = calcIncomeTaxed();
+                netPay(taxValueReturned);
+                weeklyPay(taxValueReturned);
+            }
 }); 
 
