@@ -37,6 +37,20 @@ i{
     text-align: right;
 }
 
+button.tab-decoration.btn.btn-link{
+    color: rgb(102, 10, 10);
+    text-decoration: none;
+    text-shadow: 1px 0 1px;
+}
+
+div #headingOne{
+    background-color: rgb(199, 235, 224);
+}
+
+.card-body{
+    background-color: rgb(255, 245, 245);
+}
+
 /*--------------------------------------------Income Tax Calculator CSS*/
 .font-icon-div{
     display:inline;
