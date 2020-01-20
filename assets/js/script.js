@@ -1,4 +1,3 @@
-var totalTax = 0;
 var underthirtyFiveK;
 var overTwelveK;
 var underTwelveK;
@@ -26,8 +25,7 @@ function weeklyPay(){
 
 // This calculates the usc charge.
 function addUSC(){
-   totalTax = uSC;
-   outputBox.innerHTML = totalTaxedPayedText + totalTax; 
+   return overTwelveK + underTwelveK;
 }
 
 //This function calculates the net pay after tax's owed. 
@@ -42,8 +40,8 @@ function netPay(){
 }
 
 // This takes tax credits from your total tax owed, if applicable. Those under 13,000 euro are exempt from tax, thus not applicable.
-function taxCredits(){
-    let taxCreditValue = 0;
+function taxCredits(totalTax){
+    let taxCreditValue;
 
     if(dropDownSelection.value == "single"){
         taxCreditValue = 3300;
@@ -60,6 +58,7 @@ function taxCredits(){
     }
     else if(dropDownSelection.value == "married"){
         taxCreditValue = 4950;
+        uSC = overTwelveK + underTwelveK;
         totalTax -= taxCreditValue;
         totalTax += uSC;
         totalTax = totalTax.toFixed(2);
@@ -72,22 +71,24 @@ function taxCredits(){
     }
     else if(dropDownSelection.value == "civil-partner"){
         taxCreditValue = 3300;
+        uSC = overTwelveK + underTwelveK;
         totalTax -= taxCreditValue;
         totalTax += uSC;
         totalTax = totalTax.toFixed(2);
         if(totalTax < 0){
-            addUSC();
+            totalTax += addUSC();
         }
         else{
             outputBox.innerHTML = totalTaxedPayedText + totalTax;
         }
     }   
-    return taxCreditValue;
+    
 }
 
 // This calculates rate of tax & usc depending on your income from 12,012 to 35,000 or more, those under 13,000 are exempt from tax, but not usc.
 function calcIncomeTaxed(){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
+    let totalTax;
 
     if(inputBoxValue <= 12012 && dropDownSelection.value != optionSelection.value){
         underTwelveK = inputBoxValue * 0.005;
@@ -110,7 +111,7 @@ function calcIncomeTaxed(){
         overTwelveK = inputBoxValue - 12012;
         overTwelveK = overTwelveK * 0.02;
         underTwelveK = 12012 * 0.005;
-    
+        
         underthirtyFiveK = inputBoxValue * 0.20;
         totalTax = overTwelveK + underTwelveK + underthirtyFiveK;
         totalTax = totalTax.toFixed(2);
@@ -121,18 +122,18 @@ function calcIncomeTaxed(){
         overTwelveK = inputBoxValue - 12012;
         overTwelveK = overTwelveK * 0.02;
         underTwelveK = 12012 * 0.005;
-
+        
         underthirtyFiveK = 34999 * 0.20;
         overthirtyFiveK = inputBoxValue - 34999;
         overthirtyFiveK = overthirtyFiveK * 0.40;
         
         totalTax = overTwelveK + underTwelveK + underthirtyFiveK + overthirtyFiveK;
         totalTax = totalTax.toFixed(2);
-        
+       
         taxCredits();
         
     }
-    
+    return totalTax;
 }
 // function controller
 incomeTaxed.addEventListener("click", function(){
