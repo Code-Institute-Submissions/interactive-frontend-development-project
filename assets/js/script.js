@@ -116,8 +116,9 @@ function calcIncomeTaxed(){
     }
     return totalTax;
 }
-// button listener.
+// button listener
 incomeTaxed.addEventListener("click", function(){
+    // setting a variable to be the returned value of the function that it is equals to.
     let taxValueReturned = calcIncomeTaxed();
     netPay(taxValueReturned);
     weeklyPay(taxValueReturned);
