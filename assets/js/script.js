@@ -61,13 +61,13 @@ function calcIncomeTaxed(){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
     let totalTax = 0;
 
-    if(inputBoxValue <= 12012 && dropDownSelection.value != optionSelectionEmpty.value){
+    if(inputBoxValue <= 12012){
         underTwelveK = inputBoxValue * 0.005;
         totalTax = underTwelveK;
         outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2); 
     }
 
-    else if(inputBoxValue <= 13000 && dropDownSelection.value != optionSelectionEmpty.value){
+    else if(inputBoxValue <= 13000){
         overTwelveK = inputBoxValue - 12012;
         overTwelveK = overTwelveK * 0.02;
 
@@ -75,7 +75,7 @@ function calcIncomeTaxed(){
         totalTax = overTwelveK + underTwelveK;
         outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2); 
     }
-    else if(inputBoxValue < 35000 && inputBoxValue > 13000  && dropDownSelection.value != optionSelectionEmpty.value){
+    else if(inputBoxValue < 35000 && inputBoxValue > 13000){
         overTwelveK = inputBoxValue - 12012;
         overTwelveK = overTwelveK * 0.02;
         underTwelveK = 12012 * 0.005;
@@ -93,7 +93,7 @@ function calcIncomeTaxed(){
             outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2);
         }
     }
-    else if(inputBoxValue >= 35000  && dropDownSelection.value != optionSelectionEmpty.value){
+    else if(inputBoxValue >= 35000){
         overTwelveK = inputBoxValue - 12012;
         overTwelveK = overTwelveK * 0.02;
         underTwelveK = 12012 * 0.005;
