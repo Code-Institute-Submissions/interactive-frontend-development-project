@@ -4,11 +4,12 @@ body{
 }
 
 input, select {
-  width: 100%;
+  width: 90%;
   margin-top: 10px;
 }
-p {
-    padding-top: 20px;
+
+i{
+    margin-right: 5px;
 }
 
 .col-12{
@@ -36,6 +37,27 @@ p {
     text-align: right;
 }
 
+/*--------------------------------------------Income Tax Calculator CSS*/
+.font-icon-div{
+    display:inline;
+}
+
+#make-red{
+    color: rgb(199, 60, 60);
+}
+
+#euro-symbol{
+   padding-right: 10px;
+}
+
+#income-taxed-btn{
+    margin-left: 30px;
+}
+
+#income-tax-output{
+    padding-top: 20px;
+}
+/*--------------------------------------------Media queries*/
 @media only screen and (min-width: 600px) {
   body {
     background-color: lightgray;

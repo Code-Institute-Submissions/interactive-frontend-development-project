@@ -34,21 +34,26 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
                             <form>
-                                <P class="small-print-text">any option marked with an * is required.</P>
-                                <span id="yearly-salary"><i class="fas fa-euro-sign"></i> Input your yearly salary here:</span> 
-                                <input id="income-input" type="text" name="income-per-year" value="">
-
-                                <p><i class="far fa-question-circle"></i>  Please Choose an option</p>
-                                <select id="drop-down">
-                                    <option id="blank" value="">Marital Status*</option>
-                                    <option id="single-option" value="single">Single</option>
-                                    <option id="married-option"value="married">Married</option>
-                                    <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
-                                </select> 
+                                <P class="small-print-text py-0">any option marked with an * is required.</P>
+                                <p id="yearly-salary">Input your yearly salary here:</p>
+                                    <div class="font-icon-div">
+                                        
+                                        <i id="euro-symbol" class="fas fa-euro-sign"></i><input id="income-input" type="text" name="income-per-year" value="">
+                                    </div>
+                                <p>Please Choose an option</p>
+                                <div class="font-icon-div">
+                                    <i class="far fa-question-circle"></i>
+                                    <select id="drop-down">
+                                        <option id="blank" value="">Marital Status*</option>
+                                        <option id="single-option" value="single">Single</option>
+                                        <option id="married-option"value="married">Married</option>
+                                        <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
+                                    </select> 
+                                </div>
                                 <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate Tax & Net Pay">
-                                <p id="income-tax-output">Taxed Amount Output</p>
-                                <p id="net-pay">Net Pay Output</p>
-                                <p id="weekly-pay">Weekly Pay Output</p>
+                                <p id="income-tax-output"><span id="make-red"><i class="fas fa-money-bill-wave-alt"></i></span> Taxed Amount Output</p>
+                                <p id="net-pay"><i class="fas fa-money-bill-wave-alt"></i> Net Pay Output</p>
+                                <p id="weekly-pay"><i class="fas fa-money-bill-wave-alt"></i> Weekly Pay Output</p>
                             </form>
                         </div>
                     </div>
