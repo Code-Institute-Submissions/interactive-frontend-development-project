@@ -1,4 +1,6 @@
-# Your Project's Name
+**Edmund O Callaghan**
+
+#Interactive Front-End Development Project
 
 One or two paragraphs providing an overview of your project.
 
