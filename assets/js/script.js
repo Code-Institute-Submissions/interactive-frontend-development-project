@@ -14,13 +14,15 @@ var dropDownSelection = document.getElementById("drop-down");
 
 // This calculates the rate of pay per week after tax.
 function weeklyPay(totalTax){
-    let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
-    let weeklyPayText = "Your weekly pay for the year is: € ";
-    let weeklyPayOutput = document.getElementById("weekly-pay");
-    let weeklyPay = inputBoxValue - totalTax;
-    weeklyPay = weeklyPay / 52;
+    if(dropDownSelection.value != optionSelectionEmpty.value){
+        let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
+        let weeklyPayText = "Your weekly pay for the year is: € ";
+        let weeklyPayOutput = document.getElementById("weekly-pay");
+        let weeklyPay = inputBoxValue - totalTax;
+        weeklyPay = weeklyPay / 52;
 
-    weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toFixed(2); 
+        weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toFixed(2); 
+    }
 }
 
 // This calculates the usc charge.
@@ -62,8 +64,7 @@ function calcIncomeTaxed(){
     if(inputBoxValue <= 12012 && dropDownSelection.value != optionSelectionEmpty.value){
         underTwelveK = inputBoxValue * 0.005;
         totalTax = underTwelveK;
-        totalTax = totalTax.toFixed(2);
-        outputBox.innerHTML = totalTaxedPayedText + totalTax; 
+        outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2); 
     }
 
     else if(inputBoxValue <= 13000 && dropDownSelection.value != optionSelectionEmpty.value){
@@ -72,9 +73,7 @@ function calcIncomeTaxed(){
 
         underTwelveK = 12012 * 0.005;
         totalTax = overTwelveK + underTwelveK;
-        totalTax = totalTax.toFixed(2);
-        
-        outputBox.innerHTML = totalTaxedPayedText + totalTax; 
+        outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2); 
     }
     else if(inputBoxValue < 35000 && inputBoxValue > 13000  && dropDownSelection.value != optionSelectionEmpty.value){
         overTwelveK = inputBoxValue - 12012;
@@ -87,12 +86,11 @@ function calcIncomeTaxed(){
         uSC = overTwelveK + underTwelveK;
         totalTax -= taxCredits();
         totalTax += uSC;
-        totalTax = totalTax
         if(totalTax < 0){
             outputBox.innerHTML = totalTaxedPayedText + uSC;
         }
         else{
-            outputBox.innerHTML = totalTaxedPayedText + totalTax;
+            outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2);
         }
     }
     else if(inputBoxValue >= 35000  && dropDownSelection.value != optionSelectionEmpty.value){
@@ -109,20 +107,19 @@ function calcIncomeTaxed(){
         uSC = overTwelveK + underTwelveK;
         totalTax -= taxCredits();
         totalTax += uSC;
-        totalTax = totalTax
         if(totalTax < 0){
             outputBox.innerHTML = totalTaxedPayedText + uSC;
         }
         else{
-            outputBox.innerHTML = totalTaxedPayedText + totalTax;
+            outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2);
         }
     }
     return totalTax;
 }
-// function controller
+// button listener.
 incomeTaxed.addEventListener("click", function(){
-    calcIncomeTaxed();
-    netPay();
-    weeklyPay();
+    let taxValueReturned = calcIncomeTaxed();
+    netPay(taxValueReturned);
+    weeklyPay(taxValueReturned);
 }); 
 
