@@ -7,14 +7,18 @@ function calcMpg(outputText){
     let radioBtnUK = document.getElementsByClassName("uk-mpg");
     let radioBtnUS = document.getElementsByClassName("us-mpg");
     let gallonRate = 0;
+    let usCheckedRadioBtn = document.getElementById("option1");
+    let ukCheckedRadioBtn = document.getElementById("option2");
 
     mpg = inputDistance.value / inputLitres.value;
     
-    if(document.getElementsByClassName("active").textContent == "UK MPG"){
+    if(ukCheckedRadioBtn.value == ""){
         gallonRate = 4.25;
+        alert("uk");
     }
-    else if(radioBtnUS){
+    else if(usCheckedRadioBtn.value == ""){
         gallonRate = 3.75;
+        alert("us");
     }
     mpg *= gallonRate;
     outputValue.innerHTML = outputText + mpg.toFixed(2);
@@ -37,4 +41,14 @@ $("#calc-mpg-btn").click(function() {
     else{
         $("#mpg-achieved").text("Invalid");
     }
+});
+
+$("#option2").click(function(){
+    $(this).val("checked");
+    $("#option1").val("");
+});
+
+$("#option1").click(function(){
+    $(this).val("checked");
+    $("#option2").val("");
 });
