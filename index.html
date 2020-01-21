@@ -101,7 +101,7 @@
                                     <i class="fas fa-gas-pump"></i><input id="income-input" type="text" name="income-per-year" value="">
                                 </div>
 
-                                <div class="font-icon-div">
+                                <div class="radio-buttons">
                                     <i class="fas fa-globe"></i>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-secondary active">
@@ -110,12 +110,12 @@
                                         <label class="btn btn-secondary">
                                             <input type="radio" name="options" id="option2" autocomplete="off"> US MPG
                                         </label>
-                                        <span>UK/US Gallons*</span>
+                                        <span id="mpg-span">UK/US Gallons*</span>
                                     </div>
                                 </div>
 
                                 <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate mpg achieved">
-                                <p id="mpg-achieved"><span id="make-red"><i class="fas fa-car"></i></span> Miles/Kms per gallon:</p>
+                                <p id="mpg-achieved"><span id="make-red"><i class="fas fa-car"></i></span> Miles/Kms per gallon:</p><span class="mpg-output"></span>
                                 
                             </form>
 

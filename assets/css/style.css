@@ -3,6 +3,11 @@ body{
     padding: 0;
 }
 
+p{
+    padding-top: 15px;
+    margin-bottom: 0;
+}
+
 input, select {
   width: 90%;
   margin-top: 10px;
@@ -70,6 +75,17 @@ div #headingOne #headingTwo{
 
 #income-tax-output{
     padding-top: 20px;
+}
+
+/*--------------------------------------------Mpg Calculator*/
+
+.radio-buttons{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+#mpg-span{
+    margin-left: 25px;
 }
 
 /*--------------------------------------------Media queries*/
