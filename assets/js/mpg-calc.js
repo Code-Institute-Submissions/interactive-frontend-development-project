@@ -1,39 +1,39 @@
 var mpg = 0;
 
-function calcMpg(outputText){
+function calcMpg(outputTextValue){
     let inputDistance = document.getElementById("miles-or-kms-traveled");    
     let inputLitres = document.getElementById("litres-input");
     let outputValue = document.getElementById("mpg-output");
+    let outputText = document.getElementById("mpg-text");
     let radioBtnUK = document.getElementsByClassName("uk-mpg");
     let radioBtnUS = document.getElementsByClassName("us-mpg");
-    let gallonRate = 0;
     let usCheckedRadioBtn = document.getElementById("option1");
     let ukCheckedRadioBtn = document.getElementById("option2");
+    let gallonRate = 0;
 
     mpg = inputDistance.value / inputLitres.value;
     
     if(ukCheckedRadioBtn.value == ""){
         gallonRate = 4.25;
-        alert("uk");
     }
     else if(usCheckedRadioBtn.value == ""){
         gallonRate = 3.75;
-        alert("us");
     }
     mpg *= gallonRate;
-    outputValue.innerHTML = outputText + mpg.toFixed(2);
+    outputValue.innerHTML = mpg.toFixed(2);
+    outputText.innerHTML = outputTextValue;
 }
 
 function verifyOptionIsNotBlank(){
     if($("kms-option").val() == "kms"){
-        let outputText = "Kilometers per gallon:";
+        let outputTextValue = "Kilometers";
     }
     else if($("miles-option").val() == "miles"){
-        let outputText = "Miles per gallon:";
+        let outputTextValue = "Miles";
     }
-    return outputText
+    return outputTextValue
 }
-
+//On click function
 $("#calc-mpg-btn").click(function() {
     if($("#drop-down1").val() == "kms" || $("#drop-down1").val() == "miles"){
         calcMpg();
@@ -43,6 +43,7 @@ $("#calc-mpg-btn").click(function() {
     }
 });
 
+//Radio button checked.
 $("#option2").click(function(){
     $(this).val("checked");
     $("#option1").val("");
