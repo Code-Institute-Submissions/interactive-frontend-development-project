@@ -78,6 +78,47 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
                         
+                            <form>
+                                <P class="small-print-text py-0">any option marked with an * is required.</P>
+                                <p id="yearly-salary">Input your your miles/kms here: </p>
+                                    <div class="font-icon-div">
+                                        
+                                        <i class="fas fa-road"></i><input id="income-input" type="text" name="income-per-year" value="">
+                                    </div>
+                                <p>Please Choose an option</p>
+                                <div class="font-icon-div">
+                                    <i class="far fa-question-circle"></i>
+                                    <select id="drop-down">
+                                        <option id="blank" value="">Miles or Kilometers*</option>
+                                        <option id="single-option" value="single">Kilometers</option>
+                                        <option id="married-option"value="married">Miles</option>
+                                    </select> 
+                                </div>
+
+                                <p id="yearly-salary">Fuel used in litres</p>
+                                <div class="font-icon-div">
+                                        
+                                    <i class="fas fa-gas-pump"></i><input id="income-input" type="text" name="income-per-year" value="">
+                                </div>
+
+                                <div class="font-icon-div">
+                                    <i class="fas fa-globe"></i>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> UK MPG
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> US MPG
+                                        </label>
+                                        <span>UK/US Gallons*</span>
+                                    </div>
+                                </div>
+
+                                <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate mpg achieved">
+                                <p id="mpg-achieved"><span id="make-red"><i class="fas fa-car"></i></span> Miles/Kms per gallon:</p>
+                                
+                            </form>
+
                         </div>
                     </div>
                 </div>
