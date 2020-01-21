@@ -22,14 +22,24 @@
             
                     <div class="pos-f-t">
                 <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="bg-dark p-4">
-                    
-                    <span class="text-muted">This toolkit has got you covered</span>
+                    <div class="navbar-custom p-4">
+
+                     <div class="col-lg-12 pl-0 footer-text">
+                        
+                        <a href="https://www.linkedin.com/in/edmund-crowley-o-callaghan/"
+                            target="_blank"><i class="social-links fab fa-linkedin"></i></a>
+
+                        <a href="mailto:edmundocall.eoc@gmail.com" target="_blank"><i class="social-links far fa-envelope"></i></a>
+
+                        <a href="https://github.com/Novicetheaf" target="_blank"><i class="social-links fab fa-github-square"></i></a>
+
+                        <p id="copy-right">© Edmund O Callaghan 2020</p>
+                    </div>
                     </div>
                 </div>
-                <nav class="navbar navbar-dark bg-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <h4 class="text-white">SWISS KNIFE 4 LIFE</h4>
+                <nav class="navbar navbar-dark navbar-custom">
+                    <button class="navbar-color-button navbar-toggler my-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <h4 class="h4-color-text">Swiss Knife 4 Life</h4>
                     </button>
                 </nav>
                 </div>
@@ -99,25 +109,25 @@
                         
                             <form>
                                 <P class="small-print-text py-0">any option marked with an * is required.</P>
-                                <p id="yearly-salary">Input your your miles/kms here: </p>
+                                <p id="miles-or-kms">Input your your miles/kms here: </p>
                                     <div class="font-icon-div">
                                         
-                                        <i class="fas fa-road"></i><input id="income-input" type="text" name="income-per-year" value="">
+                                        <i class="fas fa-road"></i><input id="miles-or-kms-traveled" type="text" name="miles-traveled" value="">
                                     </div>
                                 <p>Please Choose an option</p>
                                 <div class="font-icon-div">
                                     <i class="far fa-question-circle"></i>
                                     <select id="drop-down">
                                         <option id="blank" value="">Miles or Kilometers*</option>
-                                        <option id="single-option" value="single">Kilometers</option>
-                                        <option id="married-option"value="married">Miles</option>
+                                        <option id="kms-option" value="kms">Kilometers</option>
+                                        <option id="miles-option"value="miles">Miles</option>
                                     </select> 
                                 </div>
 
-                                <p id="yearly-salary">Fuel used in litres</p>
+                                <p id="fuel-used">Fuel used in litres</p>
                                 <div class="font-icon-div">
                                         
-                                    <i class="fas fa-gas-pump"></i><input id="income-input" type="text" name="income-per-year" value="">
+                                    <i class="fas fa-gas-pump"></i><input id="litres-input" type="text" name="fuel-used-litres" value="">
                                 </div>
 
                                 <div class="radio-buttons">
@@ -133,7 +143,7 @@
                                     </div>
                                 </div>
 
-                                <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate mpg achieved">
+                                <input id="calc-mpg-btn" type="button" name="calc-mpg-achieved" value="Calculate mpg achieved">
                                 <p id="mpg-achieved"><span id="make-red"><i class="fas fa-car"></i></span> Miles/Kms per gallon:</p><span class="mpg-output"></span>
                                 
                             </form>
