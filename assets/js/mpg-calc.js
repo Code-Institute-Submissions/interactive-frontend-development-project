@@ -24,7 +24,7 @@ function calcMpg(outputTextValue){
     outputText.innerHTML = outputTextValue;
 }
 
-function verifyOptionIsNotBlank(){
+function setOutputTextValue(){
     if($("kms-option").val() == "kms"){
         let outputTextValue = "Kilometers";
     }
@@ -36,7 +36,8 @@ function verifyOptionIsNotBlank(){
 //On click function
 $("#calc-mpg-btn").click(function() {
     if($("#drop-down1").val() == "kms" || $("#drop-down1").val() == "miles"){
-        calcMpg();
+        let setMilesOrKmsText = setOutputTextValue();
+        calcMpg(setMilesOrKmsText);
     }
     else{
         $("#mpg-achieved").text("Invalid");
