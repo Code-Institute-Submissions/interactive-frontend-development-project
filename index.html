@@ -117,7 +117,7 @@
                                 <p>Please Choose an option</p>
                                 <div class="font-icon-div">
                                     <i class="far fa-question-circle"></i>
-                                    <select id="drop-down">
+                                    <select id="drop-down1">
                                         <option id="blank" value="">Miles or Kilometers*</option>
                                         <option id="kms-option" value="kms">Kilometers</option>
                                         <option id="miles-option"value="miles">Miles</option>
@@ -133,10 +133,10 @@
                                 <div class="radio-buttons">
                                     <i class="fas fa-globe"></i>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-secondary active">
+                                        <label class="uk-mpg btn btn-secondary active">
                                             <input type="radio" name="options" id="option1" autocomplete="off" checked> UK MPG
                                         </label>
-                                        <label class="btn btn-secondary">
+                                        <label class="us-mpg btn btn-secondary">
                                             <input type="radio" name="options" id="option2" autocomplete="off"> US MPG
                                         </label>
                                         <span id="mpg-span">UK/US Gallons*</span>
@@ -144,7 +144,7 @@
                                 </div>
 
                                 <input id="calc-mpg-btn" type="button" name="calc-mpg-achieved" value="Calculate mpg achieved">
-                                <p id="mpg-achieved"><span id="make-red"><i class="fas fa-car"></i></span> Miles/Kms per gallon:</p><span class="mpg-output"></span>
+                                <p id="mpg-achieved"><span id="make-red"><i class="fas fa-car"></i></span> Miles/Kms per gallon: <span id="mpg-output"></span></p>
                                 
                             </form>
 
@@ -163,7 +163,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
-    <script type="text/javascript" src="assets/js/income-calc.js"></script>
-    <script type="text/javascript" src="assets/js/stopwatch.js"></script>
+    <script src="assets/js/income-calc.js"></script>
+    <script src="assets/js/stopwatch.js"></script>
+    <script src="assets/js/mpg-calc.js"></script>
  </body>
 </html>
