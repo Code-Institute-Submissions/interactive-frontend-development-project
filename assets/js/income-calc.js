@@ -1,4 +1,3 @@
-var underthirtyFiveK;
 var overTwelveK;
 var underTwelveK;
 var taxCreditValue;
@@ -22,11 +21,6 @@ function weeklyPay(totalTax){
         weeklyPay = weeklyPay / 52;
         weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toFixed(2);
     }
-}
-
-// This calculates the usc charge.
-function addUSC(){
-   return overTwelveK + underTwelveK;
 }
 
 //This function calculates the net pay after tax's owed. 
@@ -59,6 +53,7 @@ function taxCredits(){
 function calcIncomeTaxed(){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
     let totalTax = 0;
+    let underthirtyFiveK;
 
     if(inputBoxValue <= 12012){
         underTwelveK = inputBoxValue * 0.005;
