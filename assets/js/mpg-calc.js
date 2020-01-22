@@ -13,10 +13,10 @@ function calcMpg(outputTextValue){
 
     mpg = inputDistance.value / inputLitres.value;
     
-    if(ukCheckedRadioBtn.value == ""){
+    if(ukCheckedRadioBtn.value === ""){
         gallonRate = 4.25;
     }
-    else if(usCheckedRadioBtn.value == ""){
+    else if(usCheckedRadioBtn.value === ""){
         gallonRate = 3.75;
     }
     mpg *= gallonRate;
@@ -25,22 +25,24 @@ function calcMpg(outputTextValue){
 }
 
 function setOutputTextValue(){
-    if($("kms-option").val() == "kms"){
-        let outputTextValue = "Kilometers";
+    let outputTextValue;
+    if($("kms-option").val() === "kms"){
+        outputTextValue = "Kilometers";
     }
-    else if($("miles-option").val() == "miles"){
-        let outputTextValue = "Miles";
+    else if($("miles-option").val() === "miles"){
+        outputTextValue = "Miles";
     }
-    return outputTextValue
+    return outputTextValue;
 }
 //On click function
 $("#calc-mpg-btn").click(function() {
-    if($("#drop-down1").val() == "kms" || $("#drop-down1").val() == "miles"){
-        let setMilesOrKmsText = setOutputTextValue();
-        calcMpg(setMilesOrKmsText);
+    let setMilesOrKmsText;
+    if($("#drop-down1").val() == ""){
+        $("#mpg-achieved").text("Invalid");
     }
     else{
-        $("#mpg-achieved").text("Invalid");
+        setMilesOrKmsText = setOutputTextValue();
+        calcMpg(setMilesOrKmsText);
     }
 });
 

@@ -4,7 +4,7 @@ var underTwelveK;
 var taxCreditValue;
 var uSC = overTwelveK + underTwelveK;
 var totalTaxedPayedText = "Your total tax payed for the year is: € ";
-var invalid
+var invalid;
 var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 
 var outputBox = document.getElementById("income-tax-output");
@@ -12,10 +12,9 @@ var netPayOutputBox = document.getElementById("net-pay");
 var optionSelectionEmpty = document.getElementById("blank");
 var dropDownSelection = document.getElementById("drop-down");
 
-
 // This calculates the rate of pay per week after tax.
 function weeklyPay(totalTax){
-    if(dropDownSelection.value != optionSelectionEmpty.value){
+    if(dropDownSelection.value !== optionSelectionEmpty.value){
         let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
         let weeklyPayText = "Your weekly pay for the year is: € ";
         let weeklyPayOutput = document.getElementById("weekly-pay");
@@ -130,4 +129,3 @@ incomeTaxed.addEventListener("click", function(){
                 weeklyPay(taxValueReturned);
             }
 }); 
-
