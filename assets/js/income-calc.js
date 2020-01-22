@@ -39,12 +39,14 @@ function taxCredits(){
     let taxCreditValue;
 
     if(dropDownSelection.value == "single" || dropDownSelection.value == "civil-partner"){
-         taxCreditValue = 3300;
-
+         //taxCreditValue = 3300;
+         const SINGLE_OR_CIVILP_TAXCREDITVALUE = 3300; 
+         taxCreditValue = SINGLE_OR_CIVILP_TAXCREDITVALUE;
     }
     else if(dropDownSelection.value == "married"){
-         taxCreditValue = 4950;
-        
+         //taxCreditValue = 4950;
+        const MARRIED_TAXCREDITVALUE = 4950;
+        taxCreditValue = MARRIED_TAXCREDITVALUE;
     }
     return taxCreditValue;
 }
@@ -119,7 +121,7 @@ incomeTaxed.addEventListener("click", function(){
             }
             else if(dropDownSelection.value != optionSelectionEmpty.value){
                 // setting a variable to be the returned value of the function that it is equals to.
-                let taxValueReturned = calcIncomeTaxed();
+                const taxValueReturned = calcIncomeTaxed();
                 netPay(taxValueReturned);
                 weeklyPay(taxValueReturned);
             }
