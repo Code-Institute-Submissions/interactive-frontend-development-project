@@ -1,5 +1,3 @@
-var mpg = 0;
-
 function calcMpg(outputTextValue){
     let inputDistance = document.getElementById("miles-or-kms-traveled");    
     let inputLitres = document.getElementById("litres-input");
@@ -10,6 +8,7 @@ function calcMpg(outputTextValue){
     let usCheckedRadioBtn = document.getElementById("option1");
     let ukCheckedRadioBtn = document.getElementById("option2");
     let gallonRate = 0;
+    let mpg = 0;
 
     mpg = inputDistance.value / inputLitres.value;
     
@@ -26,27 +25,40 @@ function calcMpg(outputTextValue){
 
 function setOutputTextValue(){
     let outputTextValue;
-    if($("kms-option").val() === "kms"){
-        outputTextValue = "Kilometers";
+    if($("#kms-option").val() === "selected"){
+        const KM_OUTPUT_TEXT = "Kilometers";
+        outputTextValue = KM_OUTPUT_TEXT;
     }
-    else if($("miles-option").val() === "miles"){
-        outputTextValue = "Miles";
+    else if($("#miles-option").val() === "selected"){
+        const MILES_OUTPUT_TEXT = "Miles";
+        outputTextValue = MILES_OUTPUT_TEXT;
     }
     return outputTextValue;
 }
+
 //On click function
 $("#calc-mpg-btn").click(function() {
-    let setMilesOrKmsText;
     if($("#drop-down1").val() == ""){
         $("#mpg-achieved").text("Invalid");
     }
     else{
-        setMilesOrKmsText = setOutputTextValue();
+        let setMilesOrKmsText = setOutputTextValue();
         calcMpg(setMilesOrKmsText);
     }
 });
 
-//Radio button checked.
+//Dropdown option selected set value to selected.
+$("#kms-option").click(function(){
+    $(this).val("selected");
+    $("#miles-option").val("");
+});
+
+$("#miles-option").click(function(){
+    $(this).val("selected");
+    $("#kms-option").val("");
+});
+
+//Radio button selected set value to checked.
 $("#option2").click(function(){
     $(this).val("checked");
     $("#option1").val("");

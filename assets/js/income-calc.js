@@ -51,6 +51,12 @@ function taxCredits(){
     return taxCreditValue;
 }
 
+
+function lowerUscRange(){
+   return lowerUniversalSocialCharge = usersIncome * LOWER_USC_RATE;
+}
+
+
 // This calculates rate of tax & usc depending on your income from 12,012 to 35,000 or more, those under 13,000 are exempt from tax, but not usc.
 function calcIncomeTaxed(){
     let usersIncome = parseFloat(inputBox.value.replace(",", ""));
@@ -130,7 +136,7 @@ incomeTaxed.addEventListener("click", function(){
             }
             else if(dropDownSelection.value != optionSelectionEmpty.value){
                 // setting a variable to be the returned value of the function that it is equals to.
-                const taxValueReturned = calcIncomeTaxed();
+                let taxValueReturned = calcIncomeTaxed();
                 netPay(taxValueReturned);
                 weeklyPay(taxValueReturned);
             }
