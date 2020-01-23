@@ -14,12 +14,13 @@ var dropDownSelection = document.getElementById("drop-down");
 // This calculates the rate of pay per week after tax.
 function weeklyPay(totalTax){
     if(dropDownSelection.value !== optionSelectionEmpty.value){
+        const WEEKS_PER_YEAR = 52;
+        const WEEKLY_PAY_TEXT = "Your weekly pay for the year is: € ";
         let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
-        let weeklyPayText = "Your weekly pay for the year is: € ";
         let weeklyPayOutput = document.getElementById("weekly-pay");
         let weeklyPay = inputBoxValue - totalTax;
-        weeklyPay = weeklyPay / 52;
-        weeklyPayOutput.innerHTML = weeklyPayText + weeklyPay.toFixed(2);
+        weeklyPay = weeklyPay / WEEKS_PER_YEAR;
+        weeklyPayOutput.innerHTML = WEEKLY_PAY_TEXT + weeklyPay.toFixed(2);
     }
 }
 
@@ -27,10 +28,11 @@ function weeklyPay(totalTax){
 function netPay(totalTax){
     let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
         if(dropDownSelection.value != optionSelectionEmpty.value){
-        let netPayText = "Your net pay for the year is: € ";
-        let netPay = inputBoxValue - totalTax;
+        const NET_PAYTEXT = "Your net pay for the year is: € ";
+        const NET_PAY = inputBoxValue - totalTax;
+        let netPay = NET_PAY;
         netPay = netPay.toFixed(2);
-        netPayOutputBox.innerHTML = netPayText + netPay; 
+        netPayOutputBox.innerHTML = NET_PAYTEXT + netPay; 
     }
 }
 
