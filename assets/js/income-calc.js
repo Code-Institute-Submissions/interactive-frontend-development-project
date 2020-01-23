@@ -1,9 +1,8 @@
+const TAX_PAYED_OUTPUT_TEXT = "Your total tax payed for the year is: € ";
 var normalUniversalSocialCharge;
 var lowerUniversalSocialCharge;
 var taxCreditValue;
 var uSC = normalUniversalSocialCharge + lowerUniversalSocialCharge;
-var totalTaxedPayedText = "Your total tax payed for the year is: € ";
-var invalid;
 var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 
 var outputBox = document.getElementById("income-tax-output");
@@ -67,15 +66,15 @@ function calcIncomeTaxed(){
     if(usersIncome <= LOWER_USC_TAXRANGE){
         lowerUniversalSocialCharge = usersIncome * LOWER_USC_RATE;
         totalTax = lowerUniversalSocialCharge;
-        outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2); 
+        outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + totalTax.toFixed(2); 
     }
     else if(usersIncome <= NORMAL_USC_TAXRANG){
         normalUniversalSocialCharge = usersIncome - NORMAL_USC_TAXRANG;
         normalUniversalSocialCharge = normalUniversalSocialCharge * NORMAL_USC_RATE;
 
-        lowerUniversalSocialCharge = 12012 * 0.005;
+        lowerUniversalSocialCharge = LOWER_USC_TAXRANGE * LOWER_USC_RATE;
         totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge;
-        outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2); 
+        outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + totalTax.toFixed(2); 
     }
     else if(usersIncome < 35000 && usersIncome > 13000){
         normalUniversalSocialCharge = usersIncome - 12012;
@@ -89,10 +88,10 @@ function calcIncomeTaxed(){
         totalTax -= taxCredits();
         totalTax += uSC;
         if(totalTax < 0){
-            outputBox.innerHTML = totalTaxedPayedText + uSC;
+            outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + uSC;
         }
         else{
-            outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2);
+            outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + totalTax.toFixed(2);
         }
     }
     else if(usersIncome >= 35000){
@@ -110,10 +109,10 @@ function calcIncomeTaxed(){
         totalTax -= taxCredits();
         totalTax += uSC;
         if(totalTax < 0){
-            outputBox.innerHTML = totalTaxedPayedText + uSC;
+            outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + uSC;
         }
         else{
-            outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2);
+            outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + totalTax.toFixed(2);
         }
     }
     return totalTax;
