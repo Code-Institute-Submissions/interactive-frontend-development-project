@@ -55,33 +55,38 @@ function taxCredits(){
 function calcIncomeTaxed(){
     let usersIncome = parseFloat(inputBox.value.replace(",", ""));
     let totalTax = 0;
-    let underthirtyFiveK;
+    let normalTaxRate;
+    let higherTaxRange;
 
     const LOWER_USC_TAXRANGE = 12012;
     const LOWER_USC_RATE = 0.005;
-    const NORMAL_USC_TAXRANG = 13000;
+    const NORMAL_USC_TAXRANGE = 13000;
     const NORMAL_USC_RATE = 0.02;
+    const NORMAL_TAX_RANGE = 35000;
+    const NORMAL_TAX_RATE = 0.20;
+    const HIGHER_TAX_RANGE = 35000;
+    const HIGHER_TAX_RATE = 0.40;
 
     if(usersIncome <= LOWER_USC_TAXRANGE){
         lowerUniversalSocialCharge = usersIncome * LOWER_USC_RATE;
         totalTax = lowerUniversalSocialCharge;
         outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + totalTax.toFixed(2); 
     }
-    else if(usersIncome <= NORMAL_USC_TAXRANG){
-        normalUniversalSocialCharge = usersIncome - NORMAL_USC_TAXRANG;
+    else if(usersIncome <= NORMAL_USC_TAXRANGE){
+        normalUniversalSocialCharge = usersIncome - NORMAL_USC_TAXRANGE;
         normalUniversalSocialCharge = normalUniversalSocialCharge * NORMAL_USC_RATE;
 
         lowerUniversalSocialCharge = LOWER_USC_TAXRANGE * LOWER_USC_RATE;
         totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge;
         outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + totalTax.toFixed(2); 
     }
-    else if(usersIncome < 35000 && usersIncome > 13000){
-        normalUniversalSocialCharge = usersIncome - 12012;
-        normalUniversalSocialCharge = normalUniversalSocialCharge * 0.02;
-        lowerUniversalSocialCharge = 12012 * 0.005;
+    else if(usersIncome <= NORMAL_TAX_RANGE && usersIncome > NORMAL_USC_TAXRANGE){
+        normalUniversalSocialCharge = usersIncome - LOWER_USC_TAXRANGE;
+        normalUniversalSocialCharge = normalUniversalSocialCharge * NORMAL_USC_RATE;
+        lowerUniversalSocialCharge = LOWER_USC_TAXRANGE * LOWER_USC_RATE;
         
-        underthirtyFiveK = usersIncome * 0.20;
-        totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge + underthirtyFiveK;
+        normalTaxRate = usersIncome * NORMAL_TAX_RATE;
+        totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge + normalTaxRate;
         
         uSC = normalUniversalSocialCharge + lowerUniversalSocialCharge;
         totalTax -= taxCredits();
@@ -93,16 +98,16 @@ function calcIncomeTaxed(){
             outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + totalTax.toFixed(2);
         }
     }
-    else if(usersIncome >= 35000){
-        normalUniversalSocialCharge = usersIncome - 12012;
-        normalUniversalSocialCharge = normalUniversalSocialCharge * 0.02;
-        lowerUniversalSocialCharge = 12012 * 0.005;
+    else if(usersIncome > NORMAL_TAX_RANGE){
+        normalUniversalSocialCharge = usersIncome - LOWER_USC_TAXRANGE;
+        normalUniversalSocialCharge = normalUniversalSocialCharge * NORMAL_USC_RATE;
+        lowerUniversalSocialCharge = LOWER_USC_TAXRANGE * LOWER_USC_RATE;
         
-        underthirtyFiveK = 34999 * 0.20;
-        overthirtyFiveK = usersIncome - 34999;
-        overthirtyFiveK = overthirtyFiveK * 0.40;
+        normalTaxRate = NORMAL_TAX_RANGE * NORMAL_TAX_RATE;
+        higherTaxRange = usersIncome - NORMAL_TAX_RANGE;
+        higherTaxRange = higherTaxRange * HIGHER_TAX_RATE;
         
-        totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge + underthirtyFiveK + overthirtyFiveK;
+        totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge + normalTaxRate + higherTaxRange;
         
         uSC = normalUniversalSocialCharge + lowerUniversalSocialCharge;
         totalTax -= taxCredits();
