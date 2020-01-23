@@ -28,8 +28,7 @@ function netPay(totalTax){
     let usersIncome = parseFloat(inputBox.value.replace(",", ""));
         if(dropDownSelection.value != optionSelectionEmpty.value){
         const NET_PAYTEXT = "Your net pay for the year is: € ";
-        const NET_PAY = usersIncome - totalTax;
-        let netPay = NET_PAY;
+        let netPay = usersIncome - totalTax;
         netPay = netPay.toFixed(2);
         netPayOutputBox.innerHTML = NET_PAYTEXT + netPay; 
     }
