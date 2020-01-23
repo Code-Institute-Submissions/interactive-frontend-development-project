@@ -1,7 +1,7 @@
-var overTwelveK;
-var underTwelveK;
+var normalUniversalSocialCharge;
+var lowerUniversalSocialCharge;
 var taxCreditValue;
-var uSC = overTwelveK + underTwelveK;
+var uSC = normalUniversalSocialCharge + lowerUniversalSocialCharge;
 var totalTaxedPayedText = "Your total tax payed for the year is: € ";
 var invalid;
 var incomeTaxed = document.getElementById("income-taxed-btn");
@@ -16,9 +16,9 @@ function weeklyPay(totalTax){
     if(dropDownSelection.value !== optionSelectionEmpty.value){
         const WEEKS_PER_YEAR = 52;
         const WEEKLY_PAY_TEXT = "Your weekly pay for the year is: € ";
-        let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
+        let usersIncome = parseFloat(inputBox.value.replace(",", ""));
         let weeklyPayOutput = document.getElementById("weekly-pay");
-        let weeklyPay = inputBoxValue - totalTax;
+        let weeklyPay = usersIncome - totalTax;
         weeklyPay = weeklyPay / WEEKS_PER_YEAR;
         weeklyPayOutput.innerHTML = WEEKLY_PAY_TEXT + weeklyPay.toFixed(2);
     }
@@ -26,10 +26,10 @@ function weeklyPay(totalTax){
 
 //This function calculates the net pay after tax's owed. 
 function netPay(totalTax){
-    let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
+    let usersIncome = parseFloat(inputBox.value.replace(",", ""));
         if(dropDownSelection.value != optionSelectionEmpty.value){
         const NET_PAYTEXT = "Your net pay for the year is: € ";
-        const NET_PAY = inputBoxValue - totalTax;
+        const NET_PAY = usersIncome - totalTax;
         let netPay = NET_PAY;
         netPay = netPay.toFixed(2);
         netPayOutputBox.innerHTML = NET_PAYTEXT + netPay; 
@@ -55,33 +55,37 @@ function taxCredits(){
 
 // This calculates rate of tax & usc depending on your income from 12,012 to 35,000 or more, those under 13,000 are exempt from tax, but not usc.
 function calcIncomeTaxed(){
-    let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
+    let usersIncome = parseFloat(inputBox.value.replace(",", ""));
     let totalTax = 0;
     let underthirtyFiveK;
 
-    if(inputBoxValue <= 12012){
-        underTwelveK = inputBoxValue * 0.005;
-        totalTax = underTwelveK;
+    const LOWER_USC_TAXRANGE = 12012;
+    const LOWER_USC_RATE = 0.005;
+    const NORMAL_USC_TAXRANG = 13000;
+    const NORMAL_USC_RATE = 0.02;
+
+    if(usersIncome <= LOWER_USC_TAXRANGE){
+        lowerUniversalSocialCharge = usersIncome * LOWER_USC_RATE;
+        totalTax = lowerUniversalSocialCharge;
         outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2); 
     }
+    else if(usersIncome <= NORMAL_USC_TAXRANG){
+        normalUniversalSocialCharge = usersIncome - NORMAL_USC_TAXRANG;
+        normalUniversalSocialCharge = normalUniversalSocialCharge * NORMAL_USC_RATE;
 
-    else if(inputBoxValue <= 13000){
-        overTwelveK = inputBoxValue - 12012;
-        overTwelveK = overTwelveK * 0.02;
-
-        underTwelveK = 12012 * 0.005;
-        totalTax = overTwelveK + underTwelveK;
+        lowerUniversalSocialCharge = 12012 * 0.005;
+        totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge;
         outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2); 
     }
-    else if(inputBoxValue < 35000 && inputBoxValue > 13000){
-        overTwelveK = inputBoxValue - 12012;
-        overTwelveK = overTwelveK * 0.02;
-        underTwelveK = 12012 * 0.005;
+    else if(usersIncome < 35000 && usersIncome > 13000){
+        normalUniversalSocialCharge = usersIncome - 12012;
+        normalUniversalSocialCharge = normalUniversalSocialCharge * 0.02;
+        lowerUniversalSocialCharge = 12012 * 0.005;
         
-        underthirtyFiveK = inputBoxValue * 0.20;
-        totalTax = overTwelveK + underTwelveK + underthirtyFiveK;
+        underthirtyFiveK = usersIncome * 0.20;
+        totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge + underthirtyFiveK;
         
-        uSC = overTwelveK + underTwelveK;
+        uSC = normalUniversalSocialCharge + lowerUniversalSocialCharge;
         totalTax -= taxCredits();
         totalTax += uSC;
         if(totalTax < 0){
@@ -91,18 +95,18 @@ function calcIncomeTaxed(){
             outputBox.innerHTML = totalTaxedPayedText + totalTax.toFixed(2);
         }
     }
-    else if(inputBoxValue >= 35000){
-        overTwelveK = inputBoxValue - 12012;
-        overTwelveK = overTwelveK * 0.02;
-        underTwelveK = 12012 * 0.005;
+    else if(usersIncome >= 35000){
+        normalUniversalSocialCharge = usersIncome - 12012;
+        normalUniversalSocialCharge = normalUniversalSocialCharge * 0.02;
+        lowerUniversalSocialCharge = 12012 * 0.005;
         
         underthirtyFiveK = 34999 * 0.20;
-        overthirtyFiveK = inputBoxValue - 34999;
+        overthirtyFiveK = usersIncome - 34999;
         overthirtyFiveK = overthirtyFiveK * 0.40;
         
-        totalTax = overTwelveK + underTwelveK + underthirtyFiveK + overthirtyFiveK;
+        totalTax = normalUniversalSocialCharge + lowerUniversalSocialCharge + underthirtyFiveK + overthirtyFiveK;
         
-        uSC = overTwelveK + underTwelveK;
+        uSC = normalUniversalSocialCharge + lowerUniversalSocialCharge;
         totalTax -= taxCredits();
         totalTax += uSC;
         if(totalTax < 0){
@@ -117,8 +121,8 @@ function calcIncomeTaxed(){
 // button listener
 incomeTaxed.addEventListener("click", function(){
 
-            let inputBoxValue = parseFloat(inputBox.value.replace(",", ""));
-            if (isNaN(inputBoxValue) && dropDownSelection.value != optionSelectionEmpty.value) {
+            let usersIncome = parseFloat(inputBox.value.replace(",", ""));
+            if (isNaN(usersIncome) && dropDownSelection.value != optionSelectionEmpty.value) {
                 outputBox.innerHTML = "Invalid Input... Try numbers only";
             }
             else if(dropDownSelection.value != optionSelectionEmpty.value){
