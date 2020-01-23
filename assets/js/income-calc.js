@@ -1,7 +1,6 @@
 const TAX_PAYED_OUTPUT_TEXT = "Your total tax payed for the year is: € ";
 var normalUniversalSocialCharge;
 var lowerUniversalSocialCharge;
-var taxCreditValue;
 var uSC = normalUniversalSocialCharge + lowerUniversalSocialCharge;
 var incomeTaxed = document.getElementById("income-taxed-btn");
 var inputBox = document.getElementById("income-input"); 

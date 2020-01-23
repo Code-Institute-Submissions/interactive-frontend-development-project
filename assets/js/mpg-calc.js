@@ -1,6 +1,7 @@
+var inputDistance = document.getElementById("miles-or-kms-traveled");    
+var inputLitres = document.getElementById("litres-input");
+
 function calcMpg(outputTextValue){
-    let inputDistance = document.getElementById("miles-or-kms-traveled");    
-    let inputLitres = document.getElementById("litres-input");
     let outputValue = document.getElementById("mpg-output");
     let outputText = document.getElementById("mpg-text");
     let radioBtnUK = document.getElementsByClassName("uk-mpg");
@@ -13,10 +14,12 @@ function calcMpg(outputTextValue){
     mpg = inputDistance.value / inputLitres.value;
     
     if(ukCheckedRadioBtn.value === ""){
-        gallonRate = 4.25;
+        const UK_GALLON = 4.25;
+        gallonRate = UK_GALLON;
     }
     else if(usCheckedRadioBtn.value === ""){
-        gallonRate = 3.75;
+        const US_GALLON = 3.75;
+        gallonRate = US_GALLON;
     }
     mpg *= gallonRate;
     outputValue.innerHTML = mpg.toFixed(2);
@@ -38,8 +41,8 @@ function setOutputTextValue(){
 
 //On click function
 $("#calc-mpg-btn").click(function() {
-    if($("#drop-down1").val() == ""){
-        $("#mpg-achieved").text("Invalid");
+    if(isNaN(inputDistance.value) || isNaN(inputLitres.value) || $("#drop-down1").val() == ""){
+        $("#mpg-output").text("Invalid..");
     }
     else{
         let setMilesOrKmsText = setOutputTextValue();
