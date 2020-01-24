@@ -56,6 +56,10 @@ div #headingOne #headingTwo{
     background-color: rgb(255, 245, 245);
 }
 
+#accordion{
+    background-color: transparent;
+}
+
 /*--------------------------------------------Navbar-custom*/
 
 .navbar-custom{
@@ -138,7 +142,11 @@ footer{
 /*--------------------------------------------Media queries*/
 @media only screen and (min-width: 600px) {
   body {
-    background-color: rgb(199, 235, 224);
+     background: url(https://cdn.wallpapersafari.com/86/67/gS4Z7m.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
   .fixed{
     max-width: 768px;
