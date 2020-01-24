@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
-
+ 
 p{
     padding-top: 15px;
     margin-bottom: 0;
@@ -141,15 +141,17 @@ footer{
 
 /*--------------------------------------------Media queries*/
 @media only screen and (min-width: 600px) {
-  body {
+ body {
      background: url(https://cdn.wallpapersafari.com/86/67/gS4Z7m.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
+ 
   .fixed{
     max-width: 768px;
     margin: auto;
   }
+  
 }
