@@ -76,6 +76,8 @@ In addition, if it is not obvious, you should also describe how to run your code
 ### Media
 - The photos used in this site were obtained from ...
 
+Background image from: http://ljndawson.org/2560x1440-white-wallpaper-hd.html
+
 ### Acknowledgements
 
 - I received inspiration for this project from X
