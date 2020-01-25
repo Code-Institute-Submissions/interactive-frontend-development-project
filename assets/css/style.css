@@ -64,7 +64,6 @@ div #headingOne #headingTwo{
 
 .navbar-custom{
     background-color: rgba(138, 58, 58, 0.92);
-
 }
 
 .navbar-color-button{
@@ -84,6 +83,10 @@ div #headingOne #headingTwo{
 
 .navbar-color-text{
     color: #fff;
+}
+
+#navbar-font{
+    font-family: 'Permanent Marker', cursive;
 }
 
 /*--------------------------------------------Income Tax Calculator CSS*/
