@@ -12,6 +12,7 @@ var dropDownSelection = document.getElementById("drop-down");
 // This calculates the rate of pay per week after tax.
 function weeklyPay(totalTax) {
     if (dropDownSelection.value !== optionSelectionEmpty.value) {
+        //I used uppercase text for constant const variables following ES6: https://google.github.io/styleguide/javascriptguide.xml
         const WEEKS_PER_YEAR = 52;
         const WEEKLY_PAY_TEXT = "Your weekly pay for the year is: € ";
         let usersIncome = parseFloat(inputBox.value.replace(",", ""));
@@ -135,6 +136,7 @@ incomeTaxed.addEventListener("click", function () {
     } 
     else if (dropDownSelection.value != optionSelectionEmpty.value) {
         // setting a variable to be the returned value of the function that it is equals to.
+        // I used normal camel case text for non-constant const variables following ES6: https://catalin.red/es6-const-is-not-constant-immutable/
         const taxValueReturned = calcIncomeTaxed();
         netPay(taxValueReturned);
         weeklyPay(taxValueReturned);
