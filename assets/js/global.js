@@ -5,8 +5,8 @@ $(".navbar-color-button").click(function(){
 
 //income tax clac change arrow icon and collapse content.
 $(".tab-decoration").click(function(){
-    const mpgBtn = $("#mpg-calc");
-    const mpgContent = $("#collapseTwo");
+    let mpgBtn = $("#mpg-calc");
+    let mpgContent = $("#collapseTwo");
 
     incomeTaxToggleArrow();
 
@@ -30,8 +30,8 @@ function mpgCalcToggleArrow(){
 
 //mpg calc change arrow icon and collapse content.
 $(".tab-decoration2").click(function(){
-    const incomeTaxBtn = $("#income-tax");
-    const incomeTaxContent = $("#collapseOne");
+    let incomeTaxBtn = $("#income-tax");
+    let incomeTaxContent = $("#collapseOne");
 
     mpgCalcToggleArrow();
 
