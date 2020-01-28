@@ -4,8 +4,6 @@ var inputLitres = document.getElementById("litres-input");
 function calcMpg(outputTextValue) {
     const UK_CHECKED_RADIO_BTN = document.getElementById("option1");
     const US_CHECKED_RADIO_BTN = document.getElementById("option2");
-    const RADIO_BTN_UK = document.getElementsByClassName("uk-mpg");
-    const RADIO_BTN_US = document.getElementsByClassName("us-mpg");
     const IS_CHECKED = "checked";
     let outputValue = document.getElementById("mpg-output");
     let outputText = document.getElementById("mpg-text");
@@ -46,7 +44,7 @@ $("#calc-mpg-btn").click(function () {
         $("#mpg-output").text("Invalid..");
     }
     else {
-        let setMilesOrKmsText = setOutputTextValue();
+        const setMilesOrKmsText = setOutputTextValue();
         calcMpg(setMilesOrKmsText);
     }
 });

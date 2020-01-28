@@ -66,7 +66,6 @@ function calcIncomeTaxed() {
     const NORMAL_USC_RATE = 0.02;
     const NORMAL_TAX_RANGE = 35000;
     const NORMAL_TAX_RATE = 0.20;
-    const HIGHER_TAX_RANGE = 35000;
     const HIGHER_TAX_RATE = 0.40;
     let totalTax = 0;
     let normalTaxRate;
