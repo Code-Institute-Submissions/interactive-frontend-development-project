@@ -86,7 +86,13 @@ div #headingOne #headingTwo{
 }
 
 #navbar-font{
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.3em;
+    color: rgb(196, 23, 23, 0.82);
+}
+
+#navbar-font-menu{
+    font-family: 'Teko', sans-serif;
 }
 
 /*--------------------------------------------Income Tax Calculator CSS*/
