@@ -2,22 +2,23 @@ var inputDistance = document.getElementById("miles-or-kms-traveled");
 var inputLitres = document.getElementById("litres-input");
 
 function calcMpg(outputTextValue) {
+    const UK_CHECKED_RADIO_BTN = document.getElementById("option1");
+    const US_CHECKED_RADIO_BTN = document.getElementById("option2");
+    const RADIO_BTN_UK = document.getElementsByClassName("uk-mpg");
+    const RADIO_BTN_US = document.getElementsByClassName("us-mpg");
+    const IS_CHECKED = "checked";
     let outputValue = document.getElementById("mpg-output");
     let outputText = document.getElementById("mpg-text");
-    let radioBtnUK = document.getElementsByClassName("uk-mpg");
-    let radioBtnUS = document.getElementsByClassName("us-mpg");
-    let usCheckedRadioBtn = document.getElementById("option1");
-    let ukCheckedRadioBtn = document.getElementById("option2");
     let gallonRate = 0;
     let mpg = 0;
 
     mpg = inputDistance.value / inputLitres.value;
 
-    if (ukCheckedRadioBtn.value === "") {
+    if (UK_CHECKED_RADIO_BTN.value === IS_CHECKED) {
         const UK_GALLON = 4.25;
         gallonRate = UK_GALLON;
     }
-    else if (usCheckedRadioBtn.value === "") {
+    else if (US_CHECKED_RADIO_BTN.value === IS_CHECKED) {
         const US_GALLON = 3.75;
         gallonRate = US_GALLON;
     }
