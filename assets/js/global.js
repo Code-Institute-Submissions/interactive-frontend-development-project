@@ -26,16 +26,16 @@ $(".tab-decoration").click(function(){
 
 function incomeTaxToggleArrow() {
 
-    if($(".dropdown-arrow-income").hasClass("fa-chevron-circle-up")){
+    if ($(".dropdown-arrow-income").hasClass("fa-chevron-circle-up")) {
 
         $(".dropdown-arrow-income").removeClass("fa-chevron-circle-up");
         $(".dropdown-arrow-income").addClass("fa-chevron-circle-down");
 
     }
-    else {
+    else if($(".dropdown-arrow-income").hasClass("fa-chevron-circle-down")) {
 
-        $(".dropdown-arrow-income").addClass("fa-chevron-circle-up");
         $(".dropdown-arrow-income").removeClass("fa-chevron-circle-down");
+        $(".dropdown-arrow-income").addClass("fa-chevron-circle-up");
 
     }
 
@@ -43,16 +43,16 @@ function incomeTaxToggleArrow() {
 
 function mpgCalcToggleArrow() {
 
-     if($(".dropdown-arrow-mpg").hasClass("fa-chevron-circle-up")){
+    if ($(".dropdown-arrow-mpg").hasClass("fa-chevron-circle-up")) {
 
         $(".dropdown-arrow-mpg").removeClass("fa-chevron-circle-up");
         $(".dropdown-arrow-mpg").addClass("fa-chevron-circle-down");
 
     }
-    else {
+    else if ($(".dropdown-arrow-mpg").hasClass("fa-chevron-circle-down")) {
 
-        $(".dropdown-arrow-mpg").addClass("fa-chevron-circle-up");
         $(".dropdown-arrow-mpg").removeClass("fa-chevron-circle-down");
+        $(".dropdown-arrow-mpg").addClass("fa-chevron-circle-up");
 
     }
 
