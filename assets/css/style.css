@@ -60,6 +60,10 @@ div #headingOne #headingTwo{
     background-color: transparent;
 }
 
+#income-taxed-btn, #calc-mpg-btn{
+    margin-left: 30px;
+}
+
 /*--------------------------------------------Navbar-custom*/
 
 .navbar-custom{
@@ -106,10 +110,6 @@ div #headingOne #headingTwo{
 
 #euro-symbol{
    padding-right: 10px;
-}
-
-#income-taxed-btn{
-    margin-left: 30px;
 }
 
 #income-tax-output{
