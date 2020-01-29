@@ -1,8 +1,7 @@
 var inputDistance = document.getElementById("miles-or-kms-traveled");
 var inputLitres = document.getElementById("litres-input");
 
-function calcMpg(outputTextValue) {
-    console.log("final point" + outputTextValue);
+function calcMpg(label) {
     const UK_CHECKED_RADIO_BTN = document.getElementById("option1");
     const US_CHECKED_RADIO_BTN = document.getElementById("option2");
     const IS_CHECKED = "checked";
@@ -23,24 +22,12 @@ function calcMpg(outputTextValue) {
     }
     mpg *= gallonRate;
     outputValue.innerHTML = mpg.toFixed(2);
-    outputText.innerHTML = outputTextValue;
+    outputText.innerHTML = label;
 }
 
-function setOutputTextValue() {
-    let outputTextValue;
-    if ($("#kms-option").val() === "selected") {
-        const KM_OUTPUT_TEXT = "Kilometers";
-        console.log("1" + KM_OUTPUT_TEXT);
-        outputTextValue = KM_OUTPUT_TEXT;
-        console.log("2" + outputTextValue);
-    }
-    else if ($("#miles-option").val() === "selected") {
-        const MILES_OUTPUT_TEXT = "Miles";
-        console.log("1" + MILES_OUTPUT_TEXT);
-        outputTextValue = MILES_OUTPUT_TEXT;
-        console.log("2" + outputTextValue);
-    }
-    return outputTextValue;
+const LABEL = {
+'kms': 'kilometers',
+'miles': 'Miles'
 }
 
 //On click function
@@ -49,23 +36,13 @@ $("#calc-mpg-btn").click(function () {
         $("#mpg-output").text("Invalid..");
     }
     else {
-        const setMilesOrKmsText = setOutputTextValue();
-        console.log(setMilesOrKmsText);
-        calcMpg(setMilesOrKmsText);
+        const label = LABEL[$("#drop-down1").val()];
+        console.log(label);
+        // const setMilesOrKmsText = setOutputTextValue();
+        console.log(label);
+        calcMpg(label);
     }
 });
-
-
-    //Dropdown option selected set value to selected.
-    $("#kms-option").click(function () {
-        $("#kms-option").val("selected");
-        $("#miles-option").val("");
-    });
-
-    $("#miles-option").click(function () {
-        $("#miles-option").val("selected");
-        $("#kms-option").val("");
-    });
 
 //Radio button selected set value to checked.
 $("#option2").click(function () {
