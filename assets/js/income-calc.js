@@ -51,14 +51,8 @@ function taxCredits() {
     return taxCreditValue;
 }
 
-
-function lowerUscRange() {
-    return lowerUniversalSocialCharge = usersIncome * LOWER_USC_RATE;
-}
-
-
 // This calculates rate of tax & usc depending on your income from 12,012 to 35,000 or more, those under 13,000 are exempt from tax, but not usc.
-function calcIncomeTaxed() {
+function calcIncomeTaxed(lowerUniversalSocialCharge) {
     const usersIncome = parseFloat(inputBox.value.replace(",", ""));
     const LOWER_USC_TAXRANGE = 12012;
     const LOWER_USC_RATE = 0.005;

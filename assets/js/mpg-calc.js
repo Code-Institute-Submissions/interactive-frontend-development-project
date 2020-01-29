@@ -2,6 +2,7 @@ var inputDistance = document.getElementById("miles-or-kms-traveled");
 var inputLitres = document.getElementById("litres-input");
 
 function calcMpg(outputTextValue) {
+    console.log("final point" + outputTextValue);
     const UK_CHECKED_RADIO_BTN = document.getElementById("option1");
     const US_CHECKED_RADIO_BTN = document.getElementById("option2");
     const IS_CHECKED = "checked";
@@ -29,11 +30,15 @@ function setOutputTextValue() {
     let outputTextValue;
     if ($("#kms-option").val() === "selected") {
         const KM_OUTPUT_TEXT = "Kilometers";
+        console.log("1" + KM_OUTPUT_TEXT);
         outputTextValue = KM_OUTPUT_TEXT;
+        console.log("2" + outputTextValue);
     }
     else if ($("#miles-option").val() === "selected") {
         const MILES_OUTPUT_TEXT = "Miles";
+        console.log("1" + MILES_OUTPUT_TEXT);
         outputTextValue = MILES_OUTPUT_TEXT;
+        console.log("2" + outputTextValue);
     }
     return outputTextValue;
 }
@@ -45,20 +50,22 @@ $("#calc-mpg-btn").click(function () {
     }
     else {
         const setMilesOrKmsText = setOutputTextValue();
+        console.log(setMilesOrKmsText);
         calcMpg(setMilesOrKmsText);
     }
 });
 
-//Dropdown option selected set value to selected.
-$("#kms-option").click(function () {
-    $(this).val("selected");
-    $("#miles-option").val("");
-});
 
-$("#miles-option").click(function () {
-    $(this).val("selected");
-    $("#kms-option").val("");
-});
+    //Dropdown option selected set value to selected.
+    $("#kms-option").click(function () {
+        $("#kms-option").val("selected");
+        $("#miles-option").val("");
+    });
+
+    $("#miles-option").click(function () {
+        $("#miles-option").val("selected");
+        $("#kms-option").val("");
+    });
 
 //Radio button selected set value to checked.
 $("#option2").click(function () {
@@ -70,3 +77,4 @@ $("#option1").click(function () {
     $(this).val("checked");
     $("#option2").val("");
 });
+
