@@ -1,9 +1,9 @@
 # **Edmund O Callaghan | Interactive Front-End Development Toolkit Project**
 
-This is my toolkit web app that servers to help the everday user. 
-It has a fully functioning Irish income tax calculator that gives you how much tax you've been charged or will be charged, it gives you your net pay for the year or what could be your net pay. It also give you a breakdown on what your annual net income is per week. 
+This is my toolkit web app that serves to help the everday user. 
+It has a fully functioning Irish income tax calculator that calculates how much tax you've been charged or will be charged, it calculates your net pay for the year or what could be your net pay for the year. It also give you a breakdown on what your annual net income is per week. 
 
-The toolkit also has a fuel consumption calculator or most commonly refered to as a MPG calculator. With this calculator you can input your miles or kms traveled, how much fuel you used and you can convert your mpg to the UK rate at 4.25 or the US rate at 3.75.
+The toolkit also has a fuel consumption to distance calculator or most commonly refered to as a miles per gallon calculator. With this calculator you can input your miles or kilometers traveled, how much fuel you used and you can convert your mpg to the UK rate at 4.25 liters per gallon or the US rate at 3.75 liters per gallon.
 
 The web app also contains forms of contacting me in my footer, via email, github and linkedin, and via the dropdown navbar modal conact me section.
  
