@@ -52,7 +52,7 @@ $(".tab-decoration2").click(function() {
 
     mpgCalcToggleArrow();
     toggleCalcContent($("#income-tax"), incomeTaxContent);
-    
+    keepMpgOpen();
 });
 
 function toggleCalcContent(calc, content){
@@ -94,3 +94,13 @@ function toggleCalcContent(calc, content){
 }
 
 
+function keepMpgOpen(){
+
+    if (($("#mpg-calc").attr('aria-expanded') == "false" || $("#income-tax").attr('aria-expanded') == "false")) {
+
+        $("#mpg-calc").attr('aria-expanded', 'true');
+        $("#mpg-calc").removeClass("collapsed");
+        $("#collapseOne").addClass("show");
+    }
+
+}
