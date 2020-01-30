@@ -11,7 +11,7 @@ The web app also contains forms of contacting me in my footer, via email, github
 
 A live demo can be viewed [here](https://novicetheaf.github.io/interactive-frontend-development-project/ )
 
-![Desktop Demo](https://novicetheaf.github.io/interactive-frontend-development-project/master/assets/images/preview.PNG?raw=true "Desktop Demo")
+![Desktop Demo](https://raw.githubusercontent.com/Novicetheaf/interactive-frontend-development-project/master/assets/images/preview.PNG "Desktop Demo")
 
 ## User Experience
 
