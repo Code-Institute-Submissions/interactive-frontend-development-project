@@ -1,9 +1,18 @@
-# **Edmund O Callaghan | Interactive Front-End Development Project**
+# **Edmund O Callaghan | Interactive Front-End Development Toolkit Project**
 
-One or two paragraphs providing an overview of your project.
+This is my toolkit web app that servers to help the everday user. 
+It has a fully functioning Irish income tax calculator that gives you how much tax you've been charged or will be charged, it gives you your net pay for the year or what could be your net pay. It also give you a breakdown on what your annual net income is per week. 
 
-Essentially, this part is your sales pitch.
+The toolkit also has a fuel consumption calculator or most commonly refered to as a MPG calculator. With this calculator you can input your miles or kms traveled, how much fuel you used and you can convert your mpg to the UK rate at 4.25 or the US rate at 3.75.
+
+The web app also contains forms of contacting me in my footer, via email, github and linkedin, and via the dropdown navbar modal conact me section.
  
+##Demo
+
+A live demo can be viewed [here](https://novicetheaf.github.io/interactive-frontend-development-project/ )
+
+![Desktop Demo](https://novicetheaf.github.io/interactive-frontend-development-project/blob/master/assets/images/preview.PNG?raw=true "Desktop Demo")
+
 ## UX
  
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
