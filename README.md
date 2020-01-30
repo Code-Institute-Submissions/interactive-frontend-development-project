@@ -13,8 +13,42 @@ A live demo can be viewed [here](https://novicetheaf.github.io/interactive-front
 
 ![Desktop Demo](https://novicetheaf.github.io/interactive-frontend-development-project/blob/master/assets/images/preview.PNG?raw=true "Desktop Demo")
 
-## UX
- 
+## User Experience
+
+### User stories
+As an end-user I want to access the tools on this web app with ease, I want quick calculations and simple data that doesn't over complicate the situation, as in what was the tax you paid for the year, and what was the mpg I achieved.
+
+Any employers who visit my site will wannt to see my level of design and consistancy, along with the ability to write functioning code for interactivity and calculations and passing values from one method to another.
+
+Any recruiters who visit my web app will want to see if my projects meet the requirments of any position they are recruiting for.
+
+### Strategy
+In this project my main goal was to create a consistancy in design flow, and colour schemes. The web app is designed mobile first, in regards to content layout and css media queries, as most users use a mobile phone these days, but the site does respond nicely to desktop and laptop screens.
+
+The main goal in this project was the applications themselves and they're to showcase my skills with javascript, jquery, css, bootstrap, and html.
+
+### Scope
+The scope of the project was to provide an application that the end-user could use in there day to day use and would respond primarily on a mobile device, and showcase my javascript and jquery skills to date.
+
+### Structure
+The key aspects of the nvabar was to have the ability to dropdown the navbar and create an positive emotional response to the user, and give them links to my linkedin and github. It also allows them to fill out a contact me form and using Emailjs to send it to my email address. 
+
+Also in the footer there is the same links, bar the conact me button, but this is replaced with an email icon which open up microsofts email application on your device or gmail on your mobile device. This give the end-user two options as to contacting me by, along with linkedin and github.
+
+### Skeleton
+To-Do!!!
+[Mobile Design wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/mobile-design-wireframe.pdf)
+
+[Landing Page wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/home-page-wireframe.pdf)
+
+[About Page wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/home-page-wireframe.pdf)
+
+[Web Apps Page wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/web-apps-page-wireframe.pdf)
+
+[Skills Page wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/skills-page-wireframe.pdf)
+
+[Footer Section wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/footer-section-wireframe.pdf)
+
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
