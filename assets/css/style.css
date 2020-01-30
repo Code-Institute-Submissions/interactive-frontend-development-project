@@ -104,7 +104,7 @@ div #headingOne #headingTwo{
     display:inline;
 }
 
-#make-red{
+.make-red{
     color: rgb(199, 60, 60);
 }
 

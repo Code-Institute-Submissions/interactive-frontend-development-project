@@ -37,9 +37,6 @@ $("#calc-mpg-btn").click(function () {
     }
     else {
         const label = LABEL[$("#drop-down1").val()];
-        console.log(label);
-        // const setMilesOrKmsText = setOutputTextValue();
-        console.log(label);
         calcMpg(label);
     }
 });
