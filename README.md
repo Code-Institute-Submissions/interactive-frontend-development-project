@@ -54,6 +54,8 @@ rgb(199, 235, 224);
 rgb(255, 245, 245);
 rgb(255, 255, 255);
 
+#### Grey scaled shades are also included within the application.
+
 The colour scheme I was going for is this web application was to match up with a impactful contrast, yet pleasing to the eye, and above all evoking a positive response from the end-user.   
 
 ## Features
