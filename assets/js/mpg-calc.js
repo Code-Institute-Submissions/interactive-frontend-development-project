@@ -28,7 +28,7 @@ function calcMpg(label) {
 const LABEL = {
 'kms': 'kilometers',
 'miles': 'Miles'
-}
+};
 
 //On click function
 $("#calc-mpg-btn").click(function () {

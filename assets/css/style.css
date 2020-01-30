@@ -56,7 +56,7 @@ div #headingOne #headingTwo{
     background-color: rgb(255, 245, 245);
 }
 
-#accordion{
+#accordion, #accordion2{
     background-color: transparent;
 }
 
