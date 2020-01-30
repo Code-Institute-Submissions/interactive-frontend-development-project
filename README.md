@@ -58,20 +58,29 @@ rgb(255, 255, 255);
 
 The colour scheme I was going for is this web application was to match up with a impactful contrast, yet pleasing to the eye, and above all evoking a positive response from the end-user.   
 
+## Technologies
+
+1. HTML 5
+2. CSS
+3. Bootstrap (4.4.1)
+4. JavaScript
+5. JQuery (3.4.1)
+6. Emailjs (2.3.2)
+
 ## Features
-
-
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+The core features of my site is to make life easier for the end-user, by solving calculations for them and giving them specifically simplified results, that make it quick and easy to use. 
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+For my navigation bar I added a dropdown button with a jquery toggle arrow. This slides down content and give te user more options only if they want them, it keeps the flow simple, and evoking positive emotional response with clean consistancy in flow and design.
+
+More to write here !!!!
 
 ### Features Left to Implement
-- Another feature idea
+If I had more time I would like to use Chart.js to create a pie chart based on the output values to give a nice visual comparison of the what you pay on tax's vs what you received for the year etc.
+
+I still have two applications left to add to this toolkit, the first one would be a stopwatch. The second application would be a calorie counter.  
 
 ## Technologies Used
 
