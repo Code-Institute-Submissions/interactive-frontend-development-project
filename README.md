@@ -48,15 +48,20 @@ Also in the footer there is the same links, bar the conact me button, but this i
 ### Surface
 
 #### Red shades: 
-rgb(102, 10, 10);
-rgba(138, 58, 58);
-rgb(199, 60, 60);
-rgb(196, 23, 23);
+`rgb(102, 10, 10);`
+
+`rgba(138, 58, 58);`
+
+`rgb(199, 60, 60);`
+
+`rgb(196, 23, 23);`
 
 #### Cream/White shades: 
-rgb(199, 235, 224);
-rgb(255, 245, 245);
-rgb(255, 255, 255);
+`rgb(199, 235, 224);`
+
+`rgb(255, 245, 245);`
+
+`rgb(255, 255, 255);`
 
 #### Grey scaled shades are also included within the application.
 
