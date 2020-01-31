@@ -36,8 +36,9 @@ The key aspects of the nvabar was to have the ability to dropdown the navbar and
 Also in the footer there is the same links, bar the conact me button, but this is replaced with an email icon which open up microsofts email application on your device or gmail on your mobile device. This give the end-user two options as to contacting me by, along with linkedin and github.
 
 ### Skeleton
-To-Do!!!
+
 [Mobile Design wireframe - Income Tax Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/income-tax-calc-wireframe-mobile.pdf)
+[Mobile Design wireframe - Miles Per Gallon Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/mpg-calc-wireframe-mobile.pdf)
 
 To-Do!!!
 [Desktop Design wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/mobile-design-wireframe.pdf)
