@@ -41,8 +41,7 @@ Also in the footer there is the same links, bar the conact me button, but this i
 
 [Mobile Design wireframe - Miles Per Gallon Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/mpg-calc-wireframe-mobile.pdf)
 
-To-Do!!!
-[Desktop Design wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/mobile-design-wireframe.pdf)
+[Desktop Design wireframe](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/desktop-wireframe-design.pdf)
 
 ### Surface
 
