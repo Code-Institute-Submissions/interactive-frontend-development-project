@@ -37,13 +37,13 @@ Also in the footer there is the same links, bar the conact me button, but this i
 
 ### Skeleton
 
-[Mobile Design wireframe - Income Tax Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/income-tax-calc-wireframe-mobile.pdf)
+[Mobile Design wireframe - Income Tax Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/wireframes/income-tax-calc-wireframe-mobile.pdf)
 
-[Mobile Design wireframe - Miles Per Gallon Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/mpg-calc-wireframe-mobile.pdf)
+[Mobile Design wireframe - Miles Per Gallon Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/wireframes/mpg-calc-wireframe-mobile.pdf)
 
-[Desktop Design wireframe](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/desktop-wireframe-design.pdf)
+[Desktop Design wireframe](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/wireframes/desktop-wireframe-design.pdf)
 
-[Modal Design wireframe](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/modal-wireframe.pdf)
+[Modal Design wireframe](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/wireframes/modal-wireframe.pdf)
 
 ### Surface
 
