@@ -43,6 +43,8 @@ Also in the footer there is the same links, bar the conact me button, but this i
 
 [Desktop Design wireframe](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/desktop-wireframe-design.pdf)
 
+[Modal Design wireframe](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/modal-wireframe.pdf)
+
 ### Surface
 
 #### Red shades: 
