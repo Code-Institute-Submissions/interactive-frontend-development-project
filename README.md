@@ -79,7 +79,8 @@ My web apps I used an accordion bootstrap setup, and implemented jquery to fixed
 
 For the income tax calculator section I used used simple input and dropdown options along with a calculate tax button, when clicked would perform the calculations to output taxed amount for the year, net pay for the year, and a weekly pay output.
 
-The other web app miles per gallon calculator also keeps with the same format of styling. It uses two input box's miles/kilometers and your fuel used in litres. It also has a required dropdown option as to wether your distance is in miles or kilometers, this then changes the output text below accordingly.
+The other web app miles per gallon calculator also keeps with the same format of styling. It uses two input box's miles/kilometers and your fuel used in litres. 
+It also has a required dropdown option as to wether your distance is in miles or kilometers, this then changes the output text below accordingly.
 It also features radio buttons to change the gallon rate to US(3.75L) or UK(4.25L). It also follows the same styled calculate button which takes your inputs and calculates them below in MPG(miles per gallon).
 ### Features Left to Implement
 If I had more time I would like to use Chart.js to create a pie chart based on the output values to give a nice visual comparison of the what you pay on tax's vs what you received for the year etc.
@@ -109,27 +110,23 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
+The web app is hosted using Github pages, this can be found if you go to github, click settings in the repo and scroll down until you come to the heading github pages.
+The sub heading 'source section' will say 'none' on the dropdown button. You want to change this by clicking on it and choose 'master branch'. 
+Now it should be deployed through the main branch and the live site will update upon new commits that are pushed to Github.
+The landing page is named index.html which is standard for any home page of a website. 
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+In order to run the site locally, you can use the clone this site by using the following link in your terminal: 'git clone '
+To remove any connections with Github repository use the  following in your terminal: `git remote rm origin`
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
-
 ### Media
-- The photos used in this site were obtained from ...
-
-Background image from: http://ljndawson.org/2560x1440-white-wallpaper-hd.html
+I used [Ljndawson's site](http://ljndawson.org/2560x1440-white-wallpaper-hd.html) for my background image.
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+Modal Contact Form outer sections Reference can be found [here](https://mdbootstrap.com/docs/jquery/modals/forms/)
+
+Bootstrap code I used to look up for reference purposes, I used [bootstrap.com](https://getbootstrap.com/)
+
+**This project is for educational purposes.** 
