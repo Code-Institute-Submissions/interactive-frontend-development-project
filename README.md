@@ -37,7 +37,8 @@ Also in the footer there is the same links, bar the conact me button, but this i
 
 ### Skeleton
 To-Do!!!
-[Mobile Design wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/mobile-design-wireframe.pdf)
+[Mobile Design wireframe - Income Tax Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/assets/wireframes/income-tax-calc-wireframe-mobile.pdf)
+
 To-Do!!!
 [Desktop Design wireframe](https://github.com/novicetheaf/user-centric-project-take-two/blob/master/wireframes/mobile-design-wireframe.pdf)
 
