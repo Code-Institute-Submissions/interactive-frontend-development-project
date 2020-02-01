@@ -28,7 +28,7 @@ i{
 
 .card-body{
     font-family: 'Teko', sans-serif;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 .tab-decoration, .tab-decoration2{
@@ -120,6 +120,10 @@ span.requiredMessage{
     padding-top: 20px;
 }
 
+#income-tax-output, #net-pay, #weekly-pay{
+        font-size: 0.85em;
+}
+
 /*--------------------------------------------Mpg Calculator*/
 
 .radio-buttons{
@@ -155,6 +159,8 @@ footer{
 }
 
 /*--------------------------------------------Media queries*/
+
+/*--------------------------------------------Sets background image to appear and fix with of content to 768px @ 600px*/
 @media only screen and (min-width: 600px) {
  body {
      background: url(https://cdn.wallpapersafari.com/86/67/gS4Z7m.jpg) no-repeat center center fixed;
@@ -169,4 +175,11 @@ footer{
     margin: auto;
   }
   
+}
+
+/*--------------------------------------------set font-size output text income calc back to 1.0 em of 1.4em on .card*/
+@media only screen and (min-width: 400px){
+    #income-tax-output, #net-pay, #weekly-pay{
+        font-size: 1.0em;
+    }
 }
