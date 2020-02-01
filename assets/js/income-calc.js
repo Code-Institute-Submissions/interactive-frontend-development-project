@@ -124,12 +124,11 @@ function calcIncomeTaxed(lowerUniversalSocialCharge) {
 incomeTaxed.addEventListener("click", function () {
 
     const usersIncome = parseFloat(inputBox.value.replace(",", ""));
-    let required = $(".requiredMessage");
-    let requiredDropDown = $(".requiredMessageDropDown");
+    let required = $(".required-message");
+    let requiredDropDown = $(".required-message-dropdown");
 
     if (isNaN(usersIncome)) {
 
-        // outputBox.innerHTML = "Invalid Input... Please check all required fields";
         required.text("This field is required, numbers only.")
         required.css("color", "red");
         requiredDropDown.text("");
@@ -137,7 +136,6 @@ incomeTaxed.addEventListener("click", function () {
     }
     else if((dropDownSelection.value === optionSelectionEmpty.value)) {
         
-        // outputBox.innerHTML = "Invalid Input... Please check all required fields";
         requiredDropDown.text("This field is required, please choose an option.");
         requiredDropDown.css("color", "red");
         required.text("");

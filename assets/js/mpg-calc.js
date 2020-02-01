@@ -32,10 +32,37 @@ const LABEL = {
 
 //On click function
 $("#calc-mpg-btn").click(function () {
-    if (isNaN(inputDistance.value) || isNaN(inputLitres.value) || $("#drop-down1").val() == "") {
-        $("#mpg-output").text("Invalid..");
+    const inputFuelLitres = parseFloat(inputLitres.value);
+    const inputDistanceTraveled = parseFloat(inputDistance.value);
+    let requiredDistance = $(".required-mpg-distance");
+    let requiredDropDown = $(".required-measurement-distance");
+    let requiredLitres = $(".required-litres");
+    let dropDown = $("#drop-down1");
+
+    if (isNaN(inputDistanceTraveled)) {
+        requiredDistance.text("This is a required field, numbers only!");
+        requiredDistance.css("color", "red");
+        requiredDropDown.text("");
+        requiredLitres.text("");
+
+    }
+    else if(dropDown.val() == "") {
+        requiredDropDown.text("This is a required field, please choose an option.");
+        requiredDropDown.css("color", "red");
+        requiredDistance.text("");
+        requiredLitres.text("");
+
+    }
+    else if(isNaN(inputFuelLitres)) {
+        requiredLitres.text("This is a required field, numbers only!");
+        requiredLitres.css("color", "red");
+        requiredDropDown.text("");
+        requiredDistance.text("");
     }
     else {
+        requiredDropDown.text("");
+        requiredDistance.text("");
+        requiredLitres.text("");
         const label = LABEL[$("#drop-down1").val()];
         calcMpg(label);
     }
