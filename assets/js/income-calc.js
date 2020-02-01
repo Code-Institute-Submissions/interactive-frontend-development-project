@@ -153,14 +153,3 @@ incomeTaxed.addEventListener("click", function () {
         weeklyPay(taxValueReturned);
     }
 }); 
-
-// function inputValidation() {
-
-//     const usersIncome = parseFloat(inputBox.value.replace(",", ""));
-//     const validateIncomeInput = usersIncome;
-    
-//     if(validateIncomeInput === "") {
-//        required.text("This field is required!");
-//     }
-
-// }
