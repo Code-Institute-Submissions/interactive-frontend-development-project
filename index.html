@@ -71,11 +71,12 @@
                             <div class="card-body">
                                 <form>
                                     <P class="small-print-text py-0">any option marked with an * is required.</P>
-                                    <p id="yearly-salary">Input your yearly salary here:</p>
+                                    <p id="yearly-salary">Input your yearly salary here*</p>
                                         <div class="font-icon-div">
                                             
                                             <i id="euro-symbol" class="fas fa-euro-sign"></i><input id="income-input" type="text" name="income-per-year" value="" required>
                                         </div>
+                                        </br><span class="requiredMessage"></span>
                                     <p>Please Choose an option</p>
                                     <div class="font-icon-div">
                                         <i class="far fa-question-circle"></i>
@@ -86,6 +87,7 @@
                                             <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
                                         </select> 
                                     </div>
+                                    </br><span class="requiredMessageDropDown"></span>
                                     <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate Tax & Net Pay">
                                     <p><span class="make-red"><i class="fas fa-money-bill-wave-alt"></i></span> <span id="income-tax-output">Taxed Amount Output</span></p>
                                     <p><i class="fas fa-money-bill-wave-alt"></i> <span id="net-pay">Net Pay Output</span></p>
@@ -122,7 +124,7 @@
                                     <p id="miles-or-kms">Input your your miles/kms here: </p>
                                         <div class="font-icon-div">
                                             
-                                            <i class="fas fa-road"></i><input id="miles-or-kms-traveled" type="text" name="miles-traveled" value="">
+                                            <i class="fas fa-road"></i><input id="miles-or-kms-traveled" type="text" name="miles-traveled" value="" required>
                                         </div>
                                     <p>Please Choose an option</p>
                                     <div class="font-icon-div">
@@ -137,7 +139,7 @@
                                     <p id="fuel-used">Fuel used in litres</p>
                                     <div class="font-icon-div">
                                             
-                                        <i class="fas fa-gas-pump"></i><input id="litres-input" type="text" name="fuel-used-litres" value="">
+                                        <i class="fas fa-gas-pump"></i><input id="litres-input" type="text" name="fuel-used-litres" required value=""/>
                                     </div>
 
                                     <div class="radio-buttons">

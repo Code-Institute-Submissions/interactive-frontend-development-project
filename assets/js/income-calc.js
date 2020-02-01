@@ -124,14 +124,43 @@ function calcIncomeTaxed(lowerUniversalSocialCharge) {
 incomeTaxed.addEventListener("click", function () {
 
     const usersIncome = parseFloat(inputBox.value.replace(",", ""));
-    if (isNaN(usersIncome) && dropDownSelection.value != optionSelectionEmpty.value) {
-        outputBox.innerHTML = "Invalid Input... Try numbers only";
-    } 
-    else if (dropDownSelection.value != optionSelectionEmpty.value) {
+    let required = $(".requiredMessage");
+    let requiredDropDown = $(".requiredMessageDropDown");
+
+    if (isNaN(usersIncome)) {
+
+        // outputBox.innerHTML = "Invalid Input... Please check all required fields";
+        required.text("This field is required, numbers only.")
+        required.css("color", "red");
+        requiredDropDown.text("");
+
+    }
+    else if((dropDownSelection.value === optionSelectionEmpty.value)) {
+        
+        // outputBox.innerHTML = "Invalid Input... Please check all required fields";
+        requiredDropDown.text("This field is required, please choose an option.");
+        requiredDropDown.css("color", "red");
+        required.text("");
+
+    }
+    else {
         // setting a variable to be the returned value of the function that it is equals to.
         // I used normal camel case text for non-constant const variables following ES6: https://catalin.red/es6-const-is-not-constant-immutable/
+        required.text("");
+        requiredDropDown.text("");
         const taxValueReturned = calcIncomeTaxed();
         netPay(taxValueReturned);
         weeklyPay(taxValueReturned);
     }
 }); 
+
+// function inputValidation() {
+
+//     const usersIncome = parseFloat(inputBox.value.replace(",", ""));
+//     const validateIncomeInput = usersIncome;
+    
+//     if(validateIncomeInput === "") {
+//        required.text("This field is required!");
+//     }
+
+// }
