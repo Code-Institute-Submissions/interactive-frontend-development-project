@@ -96,7 +96,31 @@ If I had more time I would like to use Chart.js to create a pie chart based on t
 
 I still have two applications left to add to this toolkit, the first one would be a stopwatch. The second application would be a calorie counter.  
 
-## Testing
+## Testing 
+Testing ID: test-user-centric-frontend-project-eoc
+### Tested by: 
+Edmund O Callaghan
+
+### Tested devices: 
+DELL Desktop, AMD Desktop, DELL Latitude E5470 Laptop, Fujitsu Q702 Ultra book, ZTE Axon 7 Mobile, Iphone X, Iphone 6, Samsung S9.
+
+### Tested Resolutions: 
+320px x 640px to 4K resolution.
+
+### Tested Browsers:
+FireFox, Google Chrome, Edge.
+
+### Code validation Testing:
+[CSS Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/css-validation.PNG)
+
+[HTML Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/html-validation.PNG)
+
+### User stories
+For my user stories testing, I had to put myself in the shoes of each end user, recruiters and employers.
+As a recruiter or employer I want to find out with quick succession, whether this candidate has the required skills for the job spec and relevant experience. When you arrive at the site you are greeted with a professional concise website, this showcases good design, which is what the end-user is looking for. when you scroll down from the home page to about me you'll be given a brief description of my recent experience. In order to see some of my capabilities the user can go to the web apps section and they will get a feel for what I can do. The user can scroll further down to skills and see the most important and relevant skills I have to date.
+With regards to the above mentioned user stories the outcome for this test was successful.
+
+### Responsive Flow Testing: 
 
 Note: on edge browser getting footer links blue, as oppsed to red, and contact me is black as opposed to red, two warning on console, I have checked both, one is regarding a closing div tag that is unexpected, but I double checked it and it is meant to be there, the other one is regarding the closing body tag, which is fine, I double checked that also. no errors like this show up on chrome or firefox.
 
