@@ -180,7 +180,9 @@ On Mobile screens the site responds the same as above.
 
 - For this section I choose to use Selenium GUI based automation tests.
 
--  I choose automation testing to test the functionality of the website. Please see the seperate section on automation to run the tests and to get information on running the tests also.
+-  I choose automation testing to test the functionality of the website. Please see the seperate section on automation to run the tests and to get information on running the tests also. 
+
+[Automation Test Files & How To Setup](https://github.com/Novicetheaf/interactive-frontend-development-project/tree/master/automation-tests)
 
 Selenium is the most popular and widely used open source gui testing platform. For my tests I was between two minds to use C# Selenium Web driver or the quick and easy Selenium IDE, which is an extension for you FireFox browser. Selenium Webdriver is more extendable and gives you more control over how your tests can interact and at what speed and they also generally make for more stable and reliable test cases. 
 
