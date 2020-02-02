@@ -150,14 +150,14 @@ On desktop devices the background image appears and covers all background space 
 #### Actual outcome:
 - On desktop screens the site responds the same as above.
 
-#### Expected outcome for Laptop(s):  
+#### Expected outcome for Laptop(s): 
 Elements behave the same as on desktop, other then the background image that become more streched, yet not losing any pixel quailty of the image.
 - The Site Remains responsive throughout all devices that were tested. 
 #### Actual outcome:
 On Laptop screens the site responds the same as above.
 
 #### Expected outcome for Tablet(s):  
-Elements behave the same as on latop and desktop, bar the background image cannot be seen from 768px up, other then behind the navigation section as it remains transparent for this resolution also.
+Elements behave the same as on latop and desktop, bar the background image cannot be seen from 768px down, other then behind the navigation section as it remains transparent for this resolution also.
 
 - Site Remains responsive throughout all devices that were tested.
 
