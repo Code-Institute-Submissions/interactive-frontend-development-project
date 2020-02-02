@@ -143,20 +143,20 @@ With regards to the above mentioned user stories the outcome for this test was s
 
 ### Responsive Flow Testing:
 
-#### Expected outcome for Desktop(s):  
+#### **Expected outcome for Desktop(s):**  
 On desktop devices the background image appears and covers all background space correctly. The navigation section takes up the full with of the screen, and also becomes semi transparent in order to show the background. The main content section remains fixed to 768px, the footer section remains within these confinements also.
 
-- Site Remains responsive throughout all devices that were tested. 
+- Site Remains responsive throughout all devices that were tested.
 #### Actual outcome:
 - On desktop screens the site responds the same as above.
 
-#### Expected outcome for Laptop(s): 
+#### **Expected outcome for Laptop(s):** 
 Elements behave the same as on desktop, other then the background image that become more streched, yet not losing any pixel quailty of the image.
 - The Site Remains responsive throughout all devices that were tested. 
 #### Actual outcome:
 On Laptop screens the site responds the same as above.
 
-#### Expected outcome for Tablet(s):  
+#### **Expected outcome for Tablet(s):**  
 Elements behave the same as on latop and desktop, bar the background image cannot be seen from 768px down, other then behind the navigation section as it remains transparent for this resolution also.
 
 - Site Remains responsive throughout all devices that were tested.
@@ -164,7 +164,7 @@ Elements behave the same as on latop and desktop, bar the background image canno
 #### Actual outcome:
 On Tablet screens the site responds the same as above.
 
-#### Expected outcome for Mobile(s):  
+#### **Expected outcome for Mobile(s):**  
 the background image is no longer visible as the media query that set it in motion only comes into effect at a min 600px. The linkedin and github social icons in the navigation bar get push to the left of the section. The content adjusts accordingly with the screen size of the mobile devices tested, bar the not made above in regards to the output text for the income tax calculator, which was rectified. Please see resolution section of testing for more information.
 
 Other then the above issue the site remains responsive throughout all devices that were tested. 
@@ -174,24 +174,18 @@ On Mobile screens the site responds the same as above.
 
 ### Automation Testing: 
 
+For this section I choose to use Selenium GUI based automation tests.
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+Selenium is the most popular and widely used open source gui testing platform. For my tests I was between two minds to use C# Selenium Web driver or the quick and easy Selenium IDE, which is an extension for you FireFox browser. Selenium Webdriver is more extendable and gives you more control over how your tests can interact and at what speed and they also generally make for more stable and reliable test cases. 
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+The benefit of using Selenium IDE over the C# based Webdriver, is simply time, Selenium IDE is faster to get up off the ground, and generally is used for small scale applications, it is actully better then C# when it comes to simple sites that don't have to many varients, and not a lot of updates, 
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+If I do get to build upon this application in the future I will probably transfer over to the Webdriver as it is far easier to make extensible.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+For the test cases for my automation I simply went through every element of functionality.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+This did actully find one small issue where if the user adds numbers and letters, with numbers first and letters following, the result is 'NaN'.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 The web app is hosted using Github pages, this can be found if you go to github, click settings in the repo and scroll down until you come to the heading github pages.
