@@ -139,7 +139,11 @@ The everday user will want to gain access to either of the two applications quic
 
 As a recruiter or employer I want to find out with quick succession, whether this candidate has the required skills as an interactive frontend designer/developer for the job spec. When you arrive at the site you are greeted with a professional, concise and impactful website, this showcases good design and clear intentions as to what it is. 
 
-With regards to the above mentioned user stories the outcome for this test was successful.
+With regards to the above mentioned user stories & the usability of the web app, the outcome for this test was successful, It met all expectations of ease of use. 
+
+Note: For the accordion this uses bootstrap by standard as part of the template, however, with this in mind you have the option to close both applications down, and for design reasons, and lack of content, my idea was to keep one card section open at all time, so for this I had to write custom jquery to keep one application open.
+Ontop of this I also added in jquery to keep only one section open at once, so that the user does not have to scroll down if they open two at the same time it will close the other one.
+
 
 ### Responsive Flow Testing:
 
@@ -174,13 +178,15 @@ On Mobile screens the site responds the same as above.
 
 ### Automation Testing: 
 
-For this section I choose to use Selenium GUI based automation tests.
+- For this section I choose to use Selenium GUI based automation tests.
+
+-  I choose automation testing to test the functionality of the website. Please see the seperate section on automation to run the tests and to get information on running the tests also.
 
 Selenium is the most popular and widely used open source gui testing platform. For my tests I was between two minds to use C# Selenium Web driver or the quick and easy Selenium IDE, which is an extension for you FireFox browser. Selenium Webdriver is more extendable and gives you more control over how your tests can interact and at what speed and they also generally make for more stable and reliable test cases. 
 
 The benefit of using Selenium IDE over the C# based Webdriver, is simply time, Selenium IDE is faster to get up off the ground, and generally is used for small scale applications, it is actully better then C# when it comes to simple sites that don't have to many varients, and not a lot of updates, 
 
-If I do get to build upon this application in the future I will probably transfer over to the Webdriver as it is far easier to make extensible.
+If I do get to build upon this application in the future I will probably transfer over to the Webdriver as it is far easier to make extensible, but for the moment considering the limited time constraints, this is the best solution.
 
 For the test cases for my automation I simply went through every element of functionality.
 
