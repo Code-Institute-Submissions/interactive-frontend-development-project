@@ -114,12 +114,16 @@ Edmund O Callaghan
 - Samsung S9.
 
 ### Tested Resolutions: 
-320px x 640px to 4K resolution: no issues found.
+320px x 640px to 4K resolution: 
+
+- Note Axon 7 mini:
+
+no issues found, bar in mobile view the text output was too large to fit in one line, depending on the output size for income tax calculator, this issue was resolved by changing the set text size lower on that particular output section, and setting it to go back to normal when the screen size get to a min of 400px, this was achieved using media queries to respond to larger screens, thus remaining mobile first.
 
 ### Tested Browsers:
 FireFox, Google Chrome, Edge. 
 
-- Note: on edge browser getting footer links blue, as oppsed to red, and contact me is black as opposed to red.
+- Note: on edge browser getting footer links blue, as oppsed to red, and contact me is black as opposed to red. 
 
 ### Code validation Testing:
 [CSS Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/css-validation.PNG)
@@ -138,6 +142,34 @@ As a recruiter or employer I want to find out with quick succession, whether thi
 With regards to the above mentioned user stories the outcome for this test was successful.
 
 ### Responsive Flow Testing:
+
+#### Expected outcome for Desktop(s):  
+On desktop devices the background image appears and covers all background space correctly. The navigation section takes up the full with of the screen, and also becomes semi transparent in order to show the background. The main content section remains fixed to 768px, the footer section remains within these confinements also.
+
+- Site Remains responsive throughout all devices that were tested. 
+#### Actual outcome:
+- On desktop screens the site responds the same as above.
+
+#### Expected outcome for Laptop(s):  
+Elements behave the same as on desktop, other then the background image that become more streched, yet not losing any pixel quailty of the image.
+- The Site Remains responsive throughout all devices that were tested. 
+#### Actual outcome:
+On Laptop screens the site responds the same as above.
+
+#### Expected outcome for Tablet(s):  
+Elements behave the same as on latop and desktop, bar the background image cannot be seen from 768px up, other then behind the navigation section as it remains transparent for this resolution also.
+
+- Site Remains responsive throughout all devices that were tested.
+
+#### Actual outcome:
+On Tablet screens the site responds the same as above.
+
+#### Expected outcome for Mobile(s):  
+the background image is no longer visible as the media query that set it in motion only comes into effect at a min 600px. The linkedin and github social icons in the navigation bar get push to the left of the section. The content adjusts accordingly with the screen size of the mobile devices tested, bar the not made above in regards to the output text for the income tax calculator, which was rectified. Please see resolution section of testing for more information.
+
+Other then the above issue the site remains responsive throughout all devices that were tested. 
+#### Actual outcome:
+On Mobile screens the site responds the same as above.
 
 
 ### Automation Testing: 
