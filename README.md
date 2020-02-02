@@ -28,12 +28,12 @@ In this project my main goal was to create a consistancy in design flow, and col
 The main goal in this project was the applications themselves and they're to showcase my skills with javascript, jquery, css, bootstrap, and html.
 
 ### Scope
-The scope of the project was to provide an application that the end-user could use in there day to day use and would respond primarily on a mobile device, and showcase my javascript and jquery skills to date.
+The scope of the project was to provide an application that the end-user could use in there day to day use and would respond primarily on a mobile device, and showcase my javascript and jquery skills to date along with html and css.
 
 ### Structure
 The key aspects of the nvabar was to have the ability to dropdown the navbar and create an positive emotional response to the user, and give them links to my linkedin and github. It also allows them to fill out a contact me form and using Emailjs to send it to my email address. 
 
-Also in the footer there is the same links, bar the conact me button, but this is replaced with an email icon which open up microsofts email application on your device or gmail on your mobile device. This give the end-user two options as to contacting me by, along with linkedin and github.
+Also in the footer there is the same links, bar the conact me button, but this is replaced with an email icon which open up the modal again, and allows the user to contact me via navbar or footer. This provides constant access to any social links and forms of emailing me.
 
 ### Skeleton
 
@@ -80,18 +80,20 @@ The colour scheme I was going for is this web application was to match up with a
  
 ### Existing Features
 
-The core features of my site is to make life easier for the end-user, by solving calculations for them and giving them specifically simplified results, that make it quick and easy to use. 
+- The core features of my site is to make life easier for the end-user, by solving calculations for them and giving them specifically simplified results, that make it quick and easy to use. 
 
-For my navigation bar I added a dropdown button with a jquery toggle arrow. This slides down content and give te user more options only if they want them, it keeps the flow simple, and evoking positive emotional response with clean consistancy in flow and design.
+- For my navigation bar I added a dropdown button with a jquery toggle arrow. This slides down content and give te user more options only if they want them, it keeps the flow simple, and evoking positive emotional response with clean consistancy in flow and design.
 
-My web apps I used an accordion bootstrap setup, and implemented jquery to fixed on application to be open at once, so that the user doesn't have to scroll down very far to navigate the site.
+- My web apps I used an accordion bootstrap setup, and implemented jquery to fixed on application to be open at once, so that the user doesn't have to scroll down very far to navigate the site.
 
-For the income tax calculator section I used used simple input and dropdown options along with a calculate tax button, when clicked would perform the calculations to output taxed amount for the year, net pay for the year, and a weekly pay output.
+- For the income tax calculator section I used used simple input and dropdown options along with a calculate tax button, when clicked would perform the calculations to output taxed amount for the year, net pay for the year, and a weekly pay output.
 
-The other web app miles per gallon calculator also keeps with the same format of styling. It uses two input box's miles/kilometers and your fuel used in litres. 
+- The other web app miles per gallon calculator also keeps with the same format of styling. It uses two input box's miles/kilometers and your fuel used in litres. 
 It also has a required dropdown option as to wether your distance is in miles or kilometers, this then changes the output text below accordingly.
 It also features radio buttons to change the gallon rate to US(3.75L) or UK(4.25L). It also follows the same styled calculate button which takes your inputs and calculates them below in MPG(miles per gallon).
+
 ### Features Left to Implement
+
 If I had more time I would like to use Chart.js to create a pie chart based on the output values to give a nice visual comparison of the what you pay on tax's vs what you received for the year etc.
 
 I still have two applications left to add to this toolkit, the first one would be a stopwatch. The second application would be a calorie counter.  
@@ -102,27 +104,44 @@ Testing ID: test-user-centric-frontend-project-eoc
 Edmund O Callaghan
 
 ### Tested devices: 
-DELL Desktop, AMD Desktop, DELL Latitude E5470 Laptop, Fujitsu Q702 Ultra book, ZTE Axon 7 Mobile, Iphone X, Iphone 6, Samsung S9.
+- DELL Desktop, 
+- AMD Desktop, 
+- DELL Latitude E5470 Laptop, 
+- Fujitsu Q702 Ultra book,
+- ZTE Axon 7 Mobile,
+- Iphone X, 
+- Iphone 6, 
+- Samsung S9.
 
 ### Tested Resolutions: 
-320px x 640px to 4K resolution.
+320px x 640px to 4K resolution: no issues found.
 
 ### Tested Browsers:
-FireFox, Google Chrome, Edge.
+FireFox, Google Chrome, Edge. 
+
+- Note: on edge browser getting footer links blue, as oppsed to red, and contact me is black as opposed to red.
 
 ### Code validation Testing:
 [CSS Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/css-validation.PNG)
 
 [HTML Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/html-validation.PNG)
 
+[JavaScript Validation](Yet to be done!!!!!!)
+
 ### User stories
-For my user stories testing, I had to put myself in the shoes of each end user, recruiters and employers.
-As a recruiter or employer I want to find out with quick succession, whether this candidate has the required skills for the job spec and relevant experience. When you arrive at the site you are greeted with a professional concise website, this showcases good design, which is what the end-user is looking for. when you scroll down from the home page to about me you'll be given a brief description of my recent experience. In order to see some of my capabilities the user can go to the web apps section and they will get a feel for what I can do. The user can scroll further down to skills and see the most important and relevant skills I have to date.
+For my user stories testing, I had to put myself in the shoes of the user, anyone looking for a quick way to calculate income or fuel consumption and employers/recruiters. The user will know straight away that this site is a toolkit, it solves and simplifies. 
+
+The everday user will want to gain access to either of the two applications quickly and will be looking for a concise response in regards to their input(s). They want to be given clean and clear directions as to where they should navigate to in order to achieve their intentions, whether that be sending an email, or using the application themselves.
+
+As a recruiter or employer I want to find out with quick succession, whether this candidate has the required skills as an interactive frontend designer/developer for the job spec. When you arrive at the site you are greeted with a professional, concise and impactful website, this showcases good design and clear intentions as to what it is. 
+
 With regards to the above mentioned user stories the outcome for this test was successful.
 
-### Responsive Flow Testing: 
+### Responsive Flow Testing:
+ 
 
-Note: on edge browser getting footer links blue, as oppsed to red, and contact me is black as opposed to red, two warning on console, I have checked both, one is regarding a closing div tag that is unexpected, but I double checked it and it is meant to be there, the other one is regarding the closing body tag, which is fine, I double checked that also. no errors like this show up on chrome or firefox.
+### Automation Testing: 
+
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
