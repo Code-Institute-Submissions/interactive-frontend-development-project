@@ -249,6 +249,25 @@ Fixed this issue was resolved by changing the javascript to check the length of 
 | salary input | nothing, letters, or letters and numbers | a message saying required, numbers only | as expected |
 | marital status dropdown | dont't choose anything | required field | as expected |
 
+##### **Mpg Calculator Secttion expected actions** 
+
+| Element Tested | Action | Expected outcome | Outcome |
+| --- | --- | --- | --- |
+| distance input | input number only | no warnings appear | as expected |
+| kms/miles dropdown | choose one | no warnings | as expected |
+| fuel input | input number only | no warnings appear | as expected |
+| uk/us rate of gallon | choose one | no warnings | as expected |
+| calculate button | click | calculates the mpg | as expected |
+
+##### **Mpg Calculator Secttion unexpected actions** 
+
+| Element Tested | Action | Expected outcome | Outcome |
+| --- | --- | --- | --- |
+| distance input | input nothing, letters or number | warning appears numbers only required | as expected |
+| kms/miles dropdown | choose none | warning required | as expected |
+| fuel input | input nothing, letters or number | warnings appear numbers only required | as expected |
+| uk/us rate of gallon | choose none | no warnings | as expected |
+
 ## Deployment
 The web app is hosted using Github pages, this can be found if you go to github, click settings in the repo and scroll down until you come to the heading github pages.
 The sub heading 'source section' will say 'none' on the dropdown button. You want to change this by clicking on it and choose 'master branch'. 
