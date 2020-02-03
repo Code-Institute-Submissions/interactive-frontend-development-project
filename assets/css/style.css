@@ -99,6 +99,13 @@ div #headingOne #headingTwo{
     font-family: 'Teko', sans-serif;
 }
 
+/*--------------------------------------------Edge support*/
+@supports (-ms-ime-align: auto) {
+  #navbar-font {
+        color: #c11717;
+  }
+}
+
 /*--------------------------------------------Income Tax Calculator CSS*/
 .font-icon-div{
     display:inline;
@@ -149,6 +156,12 @@ footer{
 .footer-text{
     text-align: center;
     padding-top: 20px;
+}
+/*--------------------------------------------Edge support*/
+@supports (-ms-ime-align: auto) {
+  .footer-icons {
+        color: #c11717;
+  }
 }
 
 /*--------------------------------------------Modal css*/
