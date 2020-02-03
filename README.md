@@ -121,7 +121,9 @@ Edmund O Callaghan
 no issues found, bar in mobile view the text output was too large to fit in one line, depending on the output size for income tax calculator, this issue was resolved by changing the set text size lower on that particular output section, and setting it to go back to normal when the screen size get to a min of 400px, this was achieved using media queries to respond to larger screens, thus remaining mobile first.
 
 ### Tested Browsers:
-FireFox, Google Chrome, Edge. 
+- FireFox,
+- Google Chrome, 
+- Edge. 
 
 - Note: on edge browser getting footer links blue, as oppsed to red, and contact me is black as opposed to red.
 - This issue has been resolved, I added a support for Edge browsers to use hex colors codes, which rectified the issue.
