@@ -198,8 +198,56 @@ If I do get to build upon this application in the future I will probably transfe
 
 For the test cases for my automation I simply went through every element of functionality.
 
-This did actully find one small issue where if the user adds numbers and letters, with numbers first and letters following, the result is 'NaN'.
+Note on testing:
+- This did actully find one small issue where if the user adds numbers and letters, with numbers first and letters following, the result is 'NaN'.
+Fixed this issue was resolved by changing the javascript to check the length of charactors for input fields. 
 
+#### **Automation Test Case for user actions.**
+
+##### **Header Secttion expected actions** 
+
+| Element Tested | Action | Expected outcome | Outcome |
+| --- | --- | --- | --- |
+| dropdown toolkit button | click dropdown | after clicking on the dropdown, content slides down | as expected |
+| linkedin icon | clicks on linkedin icon | brings you to an external link | as expected |
+| github icon | clicks on github icon | brings you to an external link | as expected |
+| contact button | clicks on contact button | opens up a contact me modal | as expected |
+| input name | type in your name | no warning messages come up | as expected |
+| input email address | type in your email | no warning messages come up | as expected |
+| input message area | type in your message | no warning messages come up | as expected |
+| submit button | click send | message sent is displayed | as expected |
+
+
+##### **Header Secttion unexpected actions** 
+
+| Element Tested | Action | Expected outcome | Outcome |
+| --- | --- | --- | --- |
+| input name | leave this field blank | please fill this field | as expected |
+| input email address | leave blank or input a invalid email format | please fill this field at least 10 characters & must included @ and .com | as expected |
+| input message area | leave blank | please fill this field | as expected |
+
+
+##### **Web Apps button dropdown Secttion expected actions** 
+
+| Element Tested | Action | Expected outcome | Outcome |
+| --- | --- | --- | --- |
+| income tax calc button | click | content drops down & if the other content is open it is closed | as expected |
+| Mpg calc button | click | content drops down & if the other content is open it is closed | as expected |
+
+##### **Income Tax Calculator Secttion expected actions** 
+
+| Element Tested | Action | Expected outcome | Outcome |
+| --- | --- | --- | --- |
+| salary input | input number only | no warnings appear | as expected |
+| marital status dropdown | click and choose one | no warnings appear | as expected |
+| calculate button | click | calculates the tax, net pay and weekly pay| as expected |
+
+##### **Income Tax Calculator Secttion unexpected actions** 
+
+| Element Tested | Action | Expected outcome | Outcome |
+| --- | --- | --- | --- |
+| salary input | nothing, letters, or letters and numbers | a message saying required, numbers only | as expected |
+| marital status dropdown | dont't choose anything | required field | as expected |
 
 ## Deployment
 The web app is hosted using Github pages, this can be found if you go to github, click settings in the repo and scroll down until you come to the heading github pages.
