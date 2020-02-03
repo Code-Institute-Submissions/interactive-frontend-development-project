@@ -38,8 +38,9 @@ $("#calc-mpg-btn").click(function () {
     let requiredDropDown = $(".required-measurement-distance");
     let requiredLitres = $(".required-litres");
     let dropDown = $("#drop-down1");
+    
 
-    if (isNaN(inputDistanceTraveled)) {
+    if (isNaN(inputDistanceTraveled) || inputDistanceTraveled.toString().length != inputDistance.value.length ) {
         requiredDistance.text("This is a required field, numbers only!");
         requiredDistance.css("color", "red");
         requiredDropDown.text("");
@@ -53,11 +54,12 @@ $("#calc-mpg-btn").click(function () {
         requiredLitres.text("");
 
     }
-    else if(isNaN(inputFuelLitres)) {
+    else if(isNaN(inputFuelLitres) || inputFuelLitres.toString().length != inputLitres.value.length) {
         requiredLitres.text("This is a required field, numbers only!");
         requiredLitres.css("color", "red");
         requiredDropDown.text("");
         requiredDistance.text("");
+
     }
     else {
         requiredDropDown.text("");
@@ -65,6 +67,7 @@ $("#calc-mpg-btn").click(function () {
         requiredLitres.text("");
         const label = LABEL[$("#drop-down1").val()];
         calcMpg(label);
+        
     }
 });
 
