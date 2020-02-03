@@ -123,7 +123,8 @@ no issues found, bar in mobile view the text output was too large to fit in one 
 ### Tested Browsers:
 FireFox, Google Chrome, Edge. 
 
-- Note: on edge browser getting footer links blue, as oppsed to red, and contact me is black as opposed to red. 
+- Note: on edge browser getting footer links blue, as oppsed to red, and contact me is black as opposed to red.
+- This issue has been resolved, I added a support for Edge browsers to use hex colors codes, which rectified the issue.
 
 ### Code validation Testing:
 [CSS Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/css-validation.PNG)
