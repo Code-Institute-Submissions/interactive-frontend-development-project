@@ -130,7 +130,13 @@ FireFox, Google Chrome, Edge.
 
 [HTML Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/html-validation.PNG)
 
-[JavaScript Validation](Yet to be done!!!!!!)
+[Global JavaScript Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/global-code-validation.PNG)
+
+[Income Tax Calc JavaScript Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/income-tax-code-validation.PNG)
+
+[MPG Calc JavaScript Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/mpg-calc-code-validation.PNG)
+
+[Send Mail JavaScript Validation](https://github.com/novicetheaf/interactive-frontend-development-project/blob/master/assets/code-validation/send-mail-code-validation.PNG)
 
 ### User stories
 For my user stories testing, I had to put myself in the shoes of the user, anyone looking for a quick way to calculate income or fuel consumption and employers/recruiters. The user will know straight away that this site is a toolkit, it solves and simplifies. 

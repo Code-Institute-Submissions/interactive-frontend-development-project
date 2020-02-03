@@ -129,7 +129,7 @@ incomeTaxed.addEventListener("click", function () {
 
     if (isNaN(usersIncome)) {
 
-        required.text("This field is required, numbers only.")
+        required.text("This field is required, numbers only.");
         required.css("color", "red");
         requiredDropDown.text("");
 
