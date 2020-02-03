@@ -268,6 +268,14 @@ Fixed this issue was resolved by changing the javascript to check the length of 
 | fuel input | input nothing, letters or number | warnings appear numbers only required | as expected |
 | uk/us rate of gallon | choose none | no warnings | as expected |
 
+##### **Footer Secttion expected actions** 
+
+| Element Tested | Action | Expected outcome | Outcome |
+| --- | --- | --- | --- |
+| Elements are the same as header | click on element(s) | element(s) behave the same as the above elements in header section | as expected |
+
+Note: The email icon in the footer section is linked to the modal, all tested elements within the modal after clicking on the icon where the same as above in the header section.
+
 ## Deployment
 The web app is hosted using Github pages, this can be found if you go to github, click settings in the repo and scroll down until you come to the heading github pages.
 The sub heading 'source section' will say 'none' on the dropdown button. You want to change this by clicking on it and choose 'master branch'. 
