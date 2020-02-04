@@ -1,7 +1,9 @@
 var inputDistance = document.getElementById("miles-or-kms-traveled");
 var inputLitres = document.getElementById("litres-input");
 
+//calculate mpg
 function calcMpg(label) {
+
     const UK_CHECKED_RADIO_BTN = document.getElementById("option1");
     const US_CHECKED_RADIO_BTN = document.getElementById("option2");
     const IS_CHECKED = "checked";
@@ -23,15 +25,18 @@ function calcMpg(label) {
     mpg *= gallonRate;
     outputValue.innerHTML = mpg.toFixed(2);
     outputText.innerHTML = label;
+
 }
 
+//dropdown object values
 const LABEL = {
 'kms': 'kilometers',
 'miles': 'Miles'
 };
 
-//On click function
+//On click function & validation checker.
 $("#calc-mpg-btn").click(function () {
+
     const inputFuelLitres = parseFloat(inputLitres.value);
     const inputDistanceTraveled = parseFloat(inputDistance.value);
     let requiredDistance = $(".required-mpg-distance");
@@ -69,16 +74,21 @@ $("#calc-mpg-btn").click(function () {
         calcMpg(label);
         
     }
+
 });
 
 //Radio button selected set value to checked.
 $("#option2").click(function () {
+
     $(this).val("checked");
     $("#option1").val("");
+
 });
 
 $("#option1").click(function () {
+
     $(this).val("checked");
     $("#option2").val("");
+    
 });
 

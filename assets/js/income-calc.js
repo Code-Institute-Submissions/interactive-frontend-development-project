@@ -12,6 +12,7 @@ var dropDownSelection = document.getElementById("drop-down");
 // This calculates the rate of pay per week after tax.
 function weeklyPay(totalTax) {
     if (dropDownSelection.value !== optionSelectionEmpty.value) {
+
         //I used uppercase text for constant const variables following ES6: https://google.github.io/styleguide/javascriptguide.xml
         const WEEKS_PER_YEAR = 52;
         const WEEKLY_PAY_TEXT = "Your weekly pay for the year is: € ";
@@ -20,6 +21,7 @@ function weeklyPay(totalTax) {
         let weeklyPay = usersIncome - totalTax;
         weeklyPay = weeklyPay / WEEKS_PER_YEAR;
         weeklyPayOutput.innerHTML = WEEKLY_PAY_TEXT + weeklyPay.toFixed(2);
+
     }
 }
 
@@ -28,10 +30,13 @@ function netPay(totalTax) {
     let usersIncome = parseFloat(inputBox.value.replace(",", ""));
 
     if (dropDownSelection.value != optionSelectionEmpty.value) {
+        
         const NET_PAYTEXT = "Your net pay for the year is: € ";
         const NET_PAY = usersIncome - totalTax;
         netPayOutputBox.innerHTML = NET_PAYTEXT + NET_PAY.toFixed(2);
+
     }
+
 }
 
 // This takes tax credits from your total tax owed, if applicable. Those under 13,000 euro are exempt from tax, thus not applicable.
@@ -48,11 +53,14 @@ function taxCredits() {
         const MARRIED_TAXCREDITVALUE = 4950;
         taxCreditValue = MARRIED_TAXCREDITVALUE;
     }
+
     return taxCreditValue;
+
 }
 
 // This calculates rate of tax & usc depending on your income from 12,012 to 35,000 or more, those under 13,000 are exempt from tax, but not usc.
 function calcIncomeTaxed(lowerUniversalSocialCharge) {
+
     const usersIncome = parseFloat(inputBox.value.replace(",", ""));
     const LOWER_USC_TAXRANGE = 12012;
     const LOWER_USC_RATE = 0.005;
@@ -97,6 +105,7 @@ function calcIncomeTaxed(lowerUniversalSocialCharge) {
         }
     }
     else if (usersIncome > NORMAL_TAX_RANGE) {
+
         normalUniversalSocialCharge = usersIncome - LOWER_USC_TAXRANGE;
         normalUniversalSocialCharge = normalUniversalSocialCharge * NORMAL_USC_RATE;
         lowerUniversalSocialCharge = LOWER_USC_TAXRANGE * LOWER_USC_RATE;
@@ -116,11 +125,14 @@ function calcIncomeTaxed(lowerUniversalSocialCharge) {
         else {
             outputBox.innerHTML = TAX_PAYED_OUTPUT_TEXT + totalTax.toFixed(2);
         }
+
     }
+
     return totalTax;
+
 }
 
-// button listener
+// button listener & validation checker.
 incomeTaxed.addEventListener("click", function () {
 
     const usersIncome = parseFloat(inputBox.value.replace(",", ""));
@@ -150,4 +162,5 @@ incomeTaxed.addEventListener("click", function () {
         netPay(taxValueReturned);
         weeklyPay(taxValueReturned);
     }
+    
 }); 

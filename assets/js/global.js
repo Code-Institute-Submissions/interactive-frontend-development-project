@@ -1,4 +1,4 @@
-//navbar button
+//navbar toggle arrow
 $(".navbar-color-button").click(function(){
     $(".menu-button").toggleClass("fa-caret-up").toggleClass("fa-caret-down");
 });
@@ -55,6 +55,7 @@ $(".tab-decoration2").click(function() {
     keepMpgOpen();
 });
 
+//Keeps one content section open at all times.
 function toggleCalcContent(calc, content){
     let otherCalc;
 
@@ -93,7 +94,7 @@ function toggleCalcContent(calc, content){
 
 }
 
-
+// Keeps mpg open if both are closed
 function keepMpgOpen(){
 
     if (($("#mpg-calc").attr('aria-expanded') == "false" || $("#income-tax").attr('aria-expanded') == "false")) {
