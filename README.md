@@ -205,7 +205,12 @@ Note on testing:
 - This did actully find one small issue where if the user adds numbers and letters, with numbers first and letters following, the result is 'NaN'.
 Fixed this issue was resolved by changing the javascript to check the length of charactors for input fields. 
 
+### Unit Testing: 
+
+For this project I didn't do any true unit testing, though I did test each block of code prior to commiting each part, within the short time constraints doing true unit testing would slow the project down considerably.
+
 ## Deployment
+
 The web app is hosted using Github pages, this can be found if you go to github, click settings in the repo and scroll down until you come to the heading github pages.
 The sub heading 'source section' will say 'none' on the dropdown button. You want to change this by clicking on it and choose 'master branch'. 
 Now it should be deployed through the main branch and the live site will update upon new commits that are pushed to Github.
