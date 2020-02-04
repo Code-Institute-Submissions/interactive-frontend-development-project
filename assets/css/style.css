@@ -176,7 +176,7 @@ footer{
 /*--------------------------------------------Sets background image to appear and fix with of content to 768px @ 600px*/
 @media only screen and (min-width: 600px) {
  body {
-     background: url(https://cdn.wallpapersafari.com/86/67/gS4Z7m.jpg) no-repeat center center fixed;
+     background: url(assets\images\background-image.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
