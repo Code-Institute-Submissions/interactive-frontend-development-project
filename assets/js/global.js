@@ -1,8 +1,11 @@
 //navbar toggle arrow
-$(".navbar-color-button").click(function(){
+$(".navbar-color-button").click(function() {
+
     $(".menu-button").toggleClass("fa-caret-up").toggleClass("fa-caret-down");
+
 });
 
+//toggle arrow on click of income tax button
 function incomeTaxToggleArrow() {
 
     if ($(".dropdown-arrow-income").hasClass("fa-chevron-circle-up")) {
@@ -20,6 +23,7 @@ function incomeTaxToggleArrow() {
 
 }
 
+//toggle arrow on click of mpg button
 function mpgCalcToggleArrow() {
 
     if ($(".dropdown-arrow-mpg").hasClass("fa-chevron-circle-up")) {
@@ -38,7 +42,8 @@ function mpgCalcToggleArrow() {
 }
 
 //income tax clac change arrow icon and collapse content.
-$(".tab-decoration").click(function(){
+$(".tab-decoration").click(function() {
+
     let mpgContent = $("#collapseTwo");
 
     incomeTaxToggleArrow();
@@ -56,7 +61,8 @@ $(".tab-decoration2").click(function() {
 });
 
 //Keeps one content section open at all times.
-function toggleCalcContent(calc, content){
+function toggleCalcContent(calc, content) {
+
     let otherCalc;
 
     if (calc == $("#mpg-calc")) {
@@ -94,8 +100,8 @@ function toggleCalcContent(calc, content){
 
 }
 
-// Keeps mpg open if both are closed
-function keepMpgOpen(){
+// Keeps mpg open if both are closed.
+function keepMpgOpen() {
 
     if (($("#mpg-calc").attr('aria-expanded') == "false" || $("#income-tax").attr('aria-expanded') == "false")) {
 

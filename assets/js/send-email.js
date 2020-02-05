@@ -1,11 +1,15 @@
 //send email 
-function sendMail(contactForm) {
+const formId = document.getElementById("form-submit"); 
 
-                    emailjs.send("gmail", "edmund", {
+formId.addEventListener('submit', function(event) {
+
+    event.preventDefault();
+
+    emailjs.send("gmail", "edmund", {
                         
-                        "from_name": contactForm.name.value,
-                        "from_email": contactForm.emailaddress.value,
-                        "project_request": contactForm.projectsummary.value
+                        "from_name": formId.name.value,
+                        "from_email": formId.emailaddress.value,
+                        "project_request": formId.projectsummary.value
 
                     })
                     
@@ -23,9 +27,12 @@ function sendMail(contactForm) {
 
                     return false;
 
-                }
 
-//refresh content
+});
+
+
+
+//refresh content when message is sent
 function refreshModalContent() {
 
     $(".form-control").val("");

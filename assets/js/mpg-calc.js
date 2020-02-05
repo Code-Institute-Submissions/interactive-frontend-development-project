@@ -34,7 +34,7 @@ const LABEL = {
 'miles': 'Miles'
 };
 
-//On click function & validation checker.
+//On click function & input validation checker prior to running calculations.
 $("#calc-mpg-btn").click(function () {
 
     const inputFuelLitres = parseFloat(inputLitres.value);
