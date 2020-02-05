@@ -40,3 +40,11 @@ function refreshModalContent() {
 
 }
 
+//refresh form if user closes the form.
+$("#close-btn").click(function(){
+
+    $(".form-control").val("");
+    $(".form-control").addClass("form-refresh:focus");
+    $("#submit-response").text("");
+
+});
