@@ -12,7 +12,6 @@ formId.addEventListener('submit', function(event) {
                         "project_request": formId.projectsummary.value
 
                     })
-                    
                     .then(function() { 
                         
                         $("#submit-response").text("  Message Sent!");
@@ -27,7 +26,6 @@ formId.addEventListener('submit', function(event) {
 
                     return false;
 
-
 });
 
 
@@ -41,10 +39,9 @@ function refreshModalContent() {
 }
 
 //refresh form if user closes the form.
-$("#close-btn").click(function(){
+$("#close-btn").click(function() {
 
-    $(".form-control").val("");
-    $(".form-control").addClass("form-refresh:focus");
+    refreshModalContent();
     $("#submit-response").text("");
 
 });
