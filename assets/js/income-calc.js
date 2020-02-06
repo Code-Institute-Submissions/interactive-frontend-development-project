@@ -202,12 +202,20 @@ function calcIncomeTaxed() {
 // button listener & validation checker.
 incomeTaxed.addEventListener("click", function () {
 
-    const usersIncome = parseFloat(inputBox.value.replace(",", ""));
-    const usersInput = inputBox.value.replace(",", "");
+    const usersIncome = parseFloat(inputBox.value.replace(",", "").replace(".", ""));
+    const usersInput = inputBox.value.replace(",", "").replace(".", "");
     let required = $(".required-message");
     let requiredDropDown = $(".required-message-dropdown");
 
-    if (isNaN(usersIncome) || usersIncome.toString().length != usersInput.length) {
+
+    if (usersInput.startsWith(0)) {
+
+        required.text("Please enter a valid input, like '.20' not 0.20 or 0");
+        required.css("color", "red");
+        requiredDropDown.text("");
+
+    }
+    else if (isNaN(usersIncome) || usersIncome.toString().length != usersInput.length) {
 
         required.text("This field is required, numbers only.");
         required.css("color", "red");
