@@ -53,11 +53,13 @@ $(".tab-decoration").click(function() {
 
 //mpg calc change arrow icon and collapse content.
 $(".tab-decoration2").click(function() {
+
     let incomeTaxContent = $("#collapseOne");
 
     mpgCalcToggleArrow();
     toggleCalcContent($("#income-tax"), incomeTaxContent);
     keepMpgOpen();
+
 });
 
 //Keeps one content section open at all times.
@@ -66,10 +68,14 @@ function toggleCalcContent(calc, content) {
     let otherCalc;
 
     if (calc == $("#mpg-calc")) {
+
         otherCalc = $("#income-tax");
+
     }
     else {
+
         otherCalc = $("#mpg-calc");
+
     }
 
     if (calc.attr('aria-expanded') == "true") {
@@ -108,6 +114,7 @@ function keepMpgOpen() {
         $("#mpg-calc").attr('aria-expanded', 'true');
         $("#mpg-calc").removeClass("collapsed");
         $("#collapseOne").addClass("show");
+        
     }
 
 }
