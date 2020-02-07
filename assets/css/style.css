@@ -160,9 +160,15 @@ footer{
 
 /*--------------------------------------------Edge support feature*/
 @supports (-ms-ime-align: auto) {
-  .footer-icons {
-        color: #c11717;
-  }
+    
+    .footer-icons {
+            color: #c11717;
+    }
+
+    #navbar-font {
+            color: #c11717;
+    }
+
 }
 
 /*--------------------------------------------Media queries*/
@@ -170,38 +176,40 @@ footer{
 /*--------------------------------------------Sets background image to appear, set min height of body and fix width of content to 768px @ 600px*/
 @media only screen and (min-width: 600px) {
 
-html body{
-    min-height: 110vh;
-}
+    html body{
+        min-height: 110vh;
+    }
 
-body {
-    background: url(../images/background-image.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
- 
-.fixed{
-    max-width: 768px;
-    margin: auto;
-}
+    body {
+        background: url(../images/background-image.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    .fixed{
+        max-width: 768px;
+        margin: auto;
+    }
 
-footer{
-    max-width: 768px;
-    margin: auto;
-}
+    footer{
+        max-width: 768px;
+        margin: auto;
+    }
 
-section{
-    max-width: 768px;
-    margin: auto;
-}
+    section{
+        max-width: 768px;
+        margin: auto;
+    }
   
 }
 
 /*--------------------------------------------set font-size output text income calc back to 1.0 em of 1.4em on .card*/
-@media only screen and (min-width: 400px){
+@media only screen and (min-width: 400px) {
+
     #income-tax-output, #net-pay, #weekly-pay{
         font-size: 1.0em;
     }
+
 }
