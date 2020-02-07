@@ -99,13 +99,6 @@ div #headingOne #headingTwo{
     font-family: 'Teko', sans-serif;
 }
 
-/*--------------------------------------------Edge support*/
-@supports (-ms-ime-align: auto) {
-  #navbar-font {
-        color: #c11717;
-  }
-}
-
 /*--------------------------------------------Income Tax Calculator CSS*/
 .font-icon-div{
     display:inline;
@@ -157,12 +150,6 @@ footer{
     text-align: center;
     padding-top: 20px;
 }
-/*--------------------------------------------Edge support*/
-@supports (-ms-ime-align: auto) {
-  .footer-icons {
-        color: #c11717;
-  }
-}
 
 /*--------------------------------------------Modal css*/
 
@@ -171,27 +158,44 @@ footer{
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(148, 95, 95, 0.6);
 }
 
+/*--------------------------------------------Edge support feature*/
+@supports (-ms-ime-align: auto) {
+  .footer-icons {
+        color: #c11717;
+  }
+}
+
 /*--------------------------------------------Media queries*/
 
 /*--------------------------------------------Sets background image to appear, set min height of body and fix width of content to 768px @ 600px*/
 @media only screen and (min-width: 600px) {
 
- html body{
+html body{
     min-height: 110vh;
- }
+}
 
- body {
-     background: url(../images/background-image.jpg) no-repeat center center fixed;
+body {
+    background: url(../images/background-image.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
  
-  .fixed{
+.fixed{
     max-width: 768px;
     margin: auto;
-  }
+}
+
+footer{
+    max-width: 768px;
+    margin: auto;
+}
+
+section{
+    max-width: 768px;
+    margin: auto;
+}
   
 }
 

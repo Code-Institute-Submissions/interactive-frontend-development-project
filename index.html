@@ -18,80 +18,84 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
     <body>
-        <div class="container-fluid">
-            <div class="row mx-0">
-                <div class="col-xs-12 col-lg-12 px-0">
-                
-                        <div class="pos-f-t">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="navbar-custom p-4">
-                        <div class="row mx-0">
-                        <div class="col-md-10 col-lg-10 pl-md-2 px-0 mt-3">
-        
-                            <!--Modal popup button-->
-                            <button type="button" id="navbar-font" class="btn btn-sm btn-light nav-buttons py-0" data-toggle="modal" data-target="#modalContactForm">Contact</button>
-                            
-                        </div>
-                        <div class="col-md-2 col-lg-2 px-0">
-                            <a href="https://www.linkedin.com/in/edmund-crowley-o-callaghan/"
-                                target="_blank"><i class="social-links fab fa-linkedin ml-lg-5"></i></a>
-
-                            <a href="https://github.com/Novicetheaf" target="_blank"><i class="social-links fab fa-github-square"></i></a>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-                    <nav class="navbar navbar-dark navbar-custom">
-                        <button class="navbar-color-button navbar-toggler my-2 ml-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span id="navbar-font-menu" class="h4-color-text my-0">Toolkit  <i class="menu-button fas fa-caret-down"></i></span>
-                        </button>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Income Tax Calc Apps Section  -->
-        <div class="fixed">
+        <header>
             <div class="container-fluid">
                 <div class="row mx-0">
                     <div class="col-xs-12 col-lg-12 px-0">
-                        <div id="accordion">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                <h5 class="mb-0">
-                                    <button id="income-tax" class="tab-decoration btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        INCOME TAX CALCULATOR  <i class="dropdown-arrow-income fas fa-chevron-circle-up"></i>
-                                    </button>
-                                </h5>
-                                </div>
+                    
+                            <div class="pos-f-t">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="navbar-custom p-4">
+                            <div class="row mx-0">
+                            <div class="col-md-10 col-lg-10 pl-md-2 px-0 mt-3">
+            
+                                <!--Modal popup button-->
+                                <button type="button" id="navbar-font" class="btn btn-sm btn-light nav-buttons py-0" data-toggle="modal" data-target="#modalContactForm">Contact</button>
+                                
+                            </div>
+                            <div class="col-md-2 col-lg-2 px-0">
+                                <a href="https://www.linkedin.com/in/edmund-crowley-o-callaghan/"
+                                    target="_blank"><i class="social-links fab fa-linkedin ml-lg-5"></i></a>
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    <form>
-                                        <P class="small-print-text py-0">any option marked with an * is required.</P>
-                                        <p id="yearly-salary">Input your yearly salary here*</p>
+                                <a href="https://github.com/Novicetheaf" target="_blank"><i class="social-links fab fa-github-square"></i></a>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                        <nav class="navbar navbar-dark navbar-custom">
+                            <button class="navbar-color-button navbar-toggler my-2 ml-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span id="navbar-font-menu" class="h4-color-text my-0">Toolkit  <i class="menu-button fas fa-caret-down"></i></span>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Income Tax Calc Apps Section  -->
+        <section>
+            <div class="fixed">
+                <div class="container-fluid">
+                    <div class="row mx-0">
+                        <div class="col-xs-12 col-lg-12 px-0">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button id="income-tax" class="tab-decoration btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            INCOME TAX CALCULATOR  <i class="dropdown-arrow-income fas fa-chevron-circle-up"></i>
+                                        </button>
+                                    </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <form>
+                                            <P class="small-print-text py-0">any option marked with an * is required.</P>
+                                            <p id="yearly-salary">Input your yearly salary here*</p>
+                                                <div class="font-icon-div">
+                                                    
+                                                    <i id="euro-symbol" class="fas fa-euro-sign"></i><input id="income-input" type="text" name="income-per-year" value="" required>
+                                                </div>
+                                                <br><span class="required-message"></span>
+                                            <p>Please Choose an option</p>
                                             <div class="font-icon-div">
-                                                
-                                                <i id="euro-symbol" class="fas fa-euro-sign"></i><input id="income-input" type="text" name="income-per-year" value="" required>
+                                                <i class="far fa-question-circle"></i>
+                                                <select id="drop-down">
+                                                    <option id="blank" value="">Marital Status*</option>
+                                                    <option id="single-option" value="single">Single</option>
+                                                    <option id="married-option" value="married">Married</option>
+                                                    <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
+                                                </select> 
                                             </div>
-                                            <br><span class="required-message"></span>
-                                        <p>Please Choose an option</p>
-                                        <div class="font-icon-div">
-                                            <i class="far fa-question-circle"></i>
-                                            <select id="drop-down">
-                                                <option id="blank" value="">Marital Status*</option>
-                                                <option id="single-option" value="single">Single</option>
-                                                <option id="married-option" value="married">Married</option>
-                                                <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
-                                            </select> 
+                                            <br><span class="required-message-dropdown"></span>
+                                            <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate Tax">
+                                            <p class="font-size"><span class="make-red"><i class="fas fa-money-bill-wave-alt"></i></span> <span id="income-tax-output">Taxed Amount Output</span></p>
+                                            <p class="font-size"><i class="fas fa-money-bill-wave-alt"></i> <span id="net-pay">Net Pay Output</span></p>
+                                            <p class="font-size"><i class="fas fa-money-bill-wave-alt"></i> <span id="weekly-pay">Weekly Pay Output</span></p>
+                                        </form>
                                         </div>
-                                        <br><span class="required-message-dropdown"></span>
-                                        <input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate Tax">
-                                        <p class="font-size"><span class="make-red"><i class="fas fa-money-bill-wave-alt"></i></span> <span id="income-tax-output">Taxed Amount Output</span></p>
-                                        <p class="font-size"><i class="fas fa-money-bill-wave-alt"></i> <span id="net-pay">Net Pay Output</span></p>
-                                        <p class="font-size"><i class="fas fa-money-bill-wave-alt"></i> <span id="weekly-pay">Weekly Pay Output</span></p>
-                                    </form>
                                     </div>
                                 </div>
                             </div>
@@ -99,94 +103,97 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
         <!-- Mpg Calc Apps Section  -->
-        <div class="fixed">
-            <div class="container-fluid">
-                <div class="row mx-0">
-                    <div class="col-xs-12 col-lg-12 px-0">
-                        <div id="accordion2">
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button id="mpg-calc" class="tab-decoration2 btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        MPG FUEL CALCULATOR  <i class="dropdown-arrow-mpg fas fa-chevron-circle-down"></i>
-                                    </button>
-                                </h5>
-                                </div>
-
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="card-body">
-                                
-                                    <form>
-                                        <P class="small-print-text py-0">any option marked with an * is required.</P>
-                                        <p id="miles-or-kms">Input your your miles/kms here: </p>
-                                            <div class="font-icon-div">
-                                                <i class="fas fa-road"></i><input id="miles-or-kms-traveled" type="text" name="miles-traveled" value="" required>
-                                            </div>
-                                        <br><span class="required-mpg-distance"></span>
-
-                                        <p>Please Choose an option</p>
-                                        <div class="font-icon-div">
-                                            <i class="far fa-question-circle"></i>
-                                            <select id="drop-down1">
-                                                <option id="blank2" value="">Miles or Kilometers*</option>
-                                                <option id="kms-option" value="kms">Kilometers</option>
-                                                <option id="miles-option" value="miles">Miles</option>
-                                            </select> 
-                                        </div>
-                                        <br><span class="required-measurement-distance"></span>
-
-                                        <p id="fuel-used">Fuel used in litres</p>
-                                        <div class="font-icon-div">
-                                            <i class="fas fa-gas-pump"></i><input id="litres-input" type="text" name="fuel-used-litres" required value=""/>
-                                        </div>
-                                        <br><span class="required-litres"></span>
-
-                                        <div class="radio-buttons">
-                                            <i class="fas fa-globe"></i>
-                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                <label class="uk-mpg btn btn-secondary">
-                                                    <input checked type="radio" name="options" id="option1" value="checked"> UK MPG
-                                                </label>
-                                                <label class="us-mpg btn btn-secondary">
-                                                    <input type="radio" name="options" id="option2" value=""> US MPG
-                                                </label>
-                                                <span id="mpg-span">UK/US Gallons*</span>
-                                            </div>
-                                        </div>
-
-                                        <input id="calc-mpg-btn" type="button" name="calc-mpg-achieved" value="Calculate mpg achieved">
-                                        <p id="mpg-achieved"><span class="make-red"><i class="fas fa-car"></i></span><span id="mpg-text">Miles/Kms</span>  per gallon: <span id="mpg-output"></span></p>
-                                    </form>
-
+        <section>
+            <div class="fixed">
+                <div class="container-fluid">
+                    <div class="row mx-0">
+                        <div class="col-xs-12 col-lg-12 px-0">
+                            <div id="accordion2">
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button id="mpg-calc" class="tab-decoration2 btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            MPG FUEL CALCULATOR  <i class="dropdown-arrow-mpg fas fa-chevron-circle-down"></i>
+                                        </button>
+                                    </h5>
                                     </div>
-                                </div>
-                            </div>    
+
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                    
+                                        <form>
+                                            <P class="small-print-text py-0">any option marked with an * is required.</P>
+                                            <p id="miles-or-kms">Input your your miles/kms here: </p>
+                                                <div class="font-icon-div">
+                                                    <i class="fas fa-road"></i><input id="miles-or-kms-traveled" type="text" name="miles-traveled" value="" required>
+                                                </div>
+                                            <br><span class="required-mpg-distance"></span>
+
+                                            <p>Please Choose an option</p>
+                                            <div class="font-icon-div">
+                                                <i class="far fa-question-circle"></i>
+                                                <select id="drop-down1">
+                                                    <option id="blank2" value="">Miles or Kilometers*</option>
+                                                    <option id="kms-option" value="kms">Kilometers</option>
+                                                    <option id="miles-option" value="miles">Miles</option>
+                                                </select> 
+                                            </div>
+                                            <br><span class="required-measurement-distance"></span>
+
+                                            <p id="fuel-used">Fuel used in litres</p>
+                                            <div class="font-icon-div">
+                                                <i class="fas fa-gas-pump"></i><input id="litres-input" type="text" name="fuel-used-litres" required value=""/>
+                                            </div>
+                                            <br><span class="required-litres"></span>
+
+                                            <div class="radio-buttons">
+                                                <i class="fas fa-globe"></i>
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="uk-mpg btn btn-secondary">
+                                                        <input checked type="radio" name="options" id="option1" value="checked"> UK MPG
+                                                    </label>
+                                                    <label class="us-mpg btn btn-secondary">
+                                                        <input type="radio" name="options" id="option2" value=""> US MPG
+                                                    </label>
+                                                    <span id="mpg-span">UK/US Gallons*</span>
+                                                </div>
+                                            </div>
+
+                                            <input id="calc-mpg-btn" type="button" name="calc-mpg-achieved" value="Calculate mpg achieved">
+                                            <p id="mpg-achieved"><span class="make-red"><i class="fas fa-car"></i></span><span id="mpg-text">Miles/Kms</span>  per gallon: <span id="mpg-output"></span></p>
+                                        </form>
+
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>  
+        </section>
+
         <!--Footer Section-->
-        <div class="fixed">
-            <footer>
-                <div class="container">
-                    <div class="row mx-0">
-                        <div class="col-lg-12 footer-text">
-                            <a href="https://www.linkedin.com/in/edmund-crowley-o-callaghan/"
-                                target="_blank"><i class="footer-icons fab fa-linkedin"></i></a>
+        <footer>
+            <div class="container">
+                <div class="row mx-0">
+                    <div class="col-lg-12 footer-text">
+                        <a href="https://www.linkedin.com/in/edmund-crowley-o-callaghan/"
+                            target="_blank"><i class="footer-icons fab fa-linkedin"></i></a>
 
-                            <a href="https://github.com/Novicetheaf" target="_blank"><i class="footer-icons fab fa-github-square"></i></a>
+                        <a href="https://github.com/Novicetheaf" target="_blank"><i class="footer-icons fab fa-github-square"></i></a>
 
-                            <a href="" data-toggle="modal" data-target="#modalContactForm"><i class="footer-icons far fa-envelope"></i></a>
+                        <a href="" data-toggle="modal" data-target="#modalContactForm"><i class="footer-icons far fa-envelope"></i></a>
 
-                            <p>© Edmund O Callaghan 2020</p>
-                        </div>
+                        <p>© Edmund O Callaghan 2020</p>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
+   
         <!--Modal Contact Form - Reference to: https://mdbootstrap.com/docs/jquery/modals/forms/-->
         <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog"
             aria-hidden="true">
