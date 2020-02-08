@@ -48,12 +48,12 @@ function taxCredits() {
     let taxCreditValue;
 
     if (dropDownSelection.value == "single" || dropDownSelection.value == "civil-partner") {
-        //taxCreditValue = 3300;
+
         const SINGLE_OR_CIVILP_TAXCREDITVALUE = 3300;
         taxCreditValue = SINGLE_OR_CIVILP_TAXCREDITVALUE;
     }
     else if (dropDownSelection.value == "married") {
-        //taxCreditValue = 4950;
+
         const MARRIED_TAXCREDITVALUE = 4950;
         taxCreditValue = MARRIED_TAXCREDITVALUE;
     }
@@ -88,7 +88,6 @@ function calcNormalUscTaxRange() {
     const usersIncome = parseFloat(inputBox.value.replace(",", ""));
     const LOWER_USC_TAXRANGE = 12012;
     const NORMAL_USC_RATE = 0.02;
-
     normalUniversalSocialCharge = usersIncome - LOWER_USC_TAXRANGE;
     normalUniversalSocialCharge = normalUniversalSocialCharge * NORMAL_USC_RATE;
 

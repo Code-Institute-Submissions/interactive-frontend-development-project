@@ -15,13 +15,18 @@ function calcMpg(label) {
     mpg = inputDistance.value / inputLitres.value;
 
     if (UK_CHECKED_RADIO_BTN.value === IS_CHECKED) {
+
         const UK_GALLON = 4.25;
         gallonRate = UK_GALLON;
+
     }
     else if (US_CHECKED_RADIO_BTN.value === IS_CHECKED) {
+
         const US_GALLON = 3.75;
         gallonRate = US_GALLON;
+
     }
+
     mpg *= gallonRate;
     outputValue.innerHTML = mpg.toFixed(2);
     outputText.innerHTML = label;
@@ -46,6 +51,7 @@ $("#calc-mpg-btn").click(function () {
     
 
     if (isNaN(inputDistanceTraveled) || inputDistanceTraveled.toString().length != inputDistance.value.length ) {
+        
         requiredDistance.text("This is a required field, numbers only!");
         requiredDistance.css("color", "red");
         requiredDropDown.text("");
@@ -53,6 +59,7 @@ $("#calc-mpg-btn").click(function () {
 
     }
     else if(dropDown.val() == "") {
+
         requiredDropDown.text("This is a required field, please choose an option.");
         requiredDropDown.css("color", "red");
         requiredDistance.text("");
@@ -60,6 +67,7 @@ $("#calc-mpg-btn").click(function () {
 
     }
     else if(isNaN(inputFuelLitres) || inputFuelLitres.toString().length != inputLitres.value.length) {
+
         requiredLitres.text("This is a required field, numbers only!");
         requiredLitres.css("color", "red");
         requiredDropDown.text("");
@@ -67,6 +75,7 @@ $("#calc-mpg-btn").click(function () {
 
     }
     else {
+
         requiredDropDown.text("");
         requiredDistance.text("");
         requiredLitres.text("");
