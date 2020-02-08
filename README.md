@@ -35,6 +35,8 @@ The key aspects of the nvabar was to have the ability to dropdown the navbar and
 
 Also in the footer there is the same links, bar the conact me button, but this is replaced with an email icon which open up the modal again, and allows the user to contact me via navbar or footer. This provides constant access to any social links and forms of emailing me.
 
+The web applications would use a dropdown button that would show the application if it was clicked on and hide it again to keep the main content clean and not to have the user scrolling down far to access the other application, or the footer. If you click on one application while the other one is still open it closes the other one, in order to keep one open at all times, and not to have two open at the same time. Within the applications the structure of both applications are similar but are clearly different also.
+
 ### Skeleton
 
 [Mobile Design wireframe - Income Tax Calculator](https://github.com/Novicetheaf/interactive-frontend-development-project/blob/master/wireframes/income-tax-calc-wireframe-mobile.pdf)
@@ -207,7 +209,7 @@ Fixed this issue was resolved by changing the javascript to check the length of 
 
 ### Unit Testing: 
 
-For this project I didn't do any true unit testing, though I did test each block of code prior to commiting each part, within the short time constraints doing true unit testing would slow the project down considerably.
+For this project I didn't do any true unit testing, though I did test each block of code prior to commiting each part, within the short time constraints doing true unit testing would slow the project down considerably, and would have resulted in an incomplete project.
 
 ## Deployment
 
