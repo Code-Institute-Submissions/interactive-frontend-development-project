@@ -50,7 +50,15 @@ $("#calc-mpg-btn").click(function () {
     let dropDown = $("#drop-down1");
     
 
-    if (isNaN(inputDistanceTraveled) || inputDistanceTraveled.toString().length != inputDistance.value.length ) {
+    if (inputDistanceTraveled == "0" ) {
+
+        requiredDistance.text("Please enter a valid input, cannot be 0.");
+        requiredDistance.css("color", "red");
+        requiredDropDown.text("");
+        requiredLitres.text("");
+        
+    }
+    else if (isNaN(inputDistanceTraveled) || inputDistanceTraveled.toString().length != inputDistance.value.length ) {
         
         requiredDistance.text("This is a required field, numbers only!");
         requiredDistance.css("color", "red");
