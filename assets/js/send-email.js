@@ -33,8 +33,7 @@ formId.addEventListener('submit', function(event) {
 //refresh content when message is sent
 function refreshModalContent() {
 
-    $(".form-control").val("");
-    $(".form-control").addClass("form-refresh:focus");
+    $("#form-submit")[0].reset();
 
 }
 
