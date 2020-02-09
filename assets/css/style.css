@@ -48,7 +48,7 @@ button.income-tax-btn.btn.btn-link, button.mpg-calc-btn.btn.btn-link{
     text-shadow: 1px 0 1px;
 }
 
-div #headingOne #headingTwo{
+div #heading-income #heading-mpg{
     background-color: rgb(199, 235, 224);
 }
 
@@ -186,11 +186,6 @@ footer{
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-    }
-    
-    .fixed{
-        max-width: 768px;
-        margin: auto;
     }
 
     footer{
