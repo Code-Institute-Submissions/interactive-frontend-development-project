@@ -31,7 +31,7 @@ i{
     font-size: 1.3em;
 }
 
-.tab-decoration, .tab-decoration2{
+.income-tax-btn, .mpg-calc-btn{
     font-family: 'Audiowide', cursive;
 }
 
@@ -42,7 +42,7 @@ i{
     text-align: right;
 }
 
-button.tab-decoration.btn.btn-link, button.tab-decoration2.btn.btn-link{
+button.income-tax-btn.btn.btn-link, button.mpg-calc-btn.btn.btn-link{
     color: rgb(102, 10, 10);
     text-decoration: none;
     text-shadow: 1px 0 1px;
@@ -74,7 +74,7 @@ div #headingOne #headingTwo{
     background-color: rgb(255, 245, 245);
 }
 
-.h4-color-text{
+.logo-color-text{
      color: rgb(199, 60, 60);
 }
 

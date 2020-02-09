@@ -6,14 +6,14 @@ $(".navbar-color-button").click(function() {
 });
 
 //income tax clac collapse content.
-$(".tab-decoration").click(function() {
+$(".income-tax-btn").click(function() {
 
     toggleAccordian($('#collapseOne'), $('#collapseTwo'));
 
 });
 
 //mpg calc change collapse content.
-$(".tab-decoration2").click(function() {
+$(".mpg-calc-btn").click(function() {
 
     toggleAccordian($('#collapseTwo'), $('#collapseOne'));
 
