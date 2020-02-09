@@ -8,14 +8,14 @@ $(".navbar-color-button").click(function() {
 //income tax clac collapse content.
 $(".income-tax-btn").click(function() {
 
-    toggleAccordian($('#collapseOne'), $('#collapseTwo'));
+    toggleAccordian($('#collapse-income'), $('#collapse-mpg'));
 
 });
 
 //mpg calc change collapse content.
 $(".mpg-calc-btn").click(function() {
 
-    toggleAccordian($('#collapseTwo'), $('#collapseOne'));
+    toggleAccordian($('#collapse-mpg'), $('#collapse-income'));
 
 });
 
