@@ -57,53 +57,51 @@
 
 	<!-- Income Tax Calc Apps Section  -->
 	<section>
-		<div class="fixed">
-			<div class="container-fluid">
-				<div class="row mx-0">
-					<div class="col-xs-12 col-lg-12 px-0">
-						<div id="accordion">
-							<div class="card">
-								<div class="card-header" id="headingOne">
-									<h5 class="mb-0">
-										<button id="income-tax" class="income-tax-btn btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		<div class="container-fluid">
+			<div class="row mx-0">
+				<div class="col-xs-12 col-lg-12 px-0">
+					<div id="accordion">
+						<div class="card">
+							<div class="card-header" id="heading-income">
+								<h5 class="mb-0">
+									<button id="income-tax" class="income-tax-btn btn btn-link" data-toggle="collapse" data-target="#collapse-income" aria-expanded="true" aria-controls="collapse-income">
                                             INCOME TAX CALCULATOR   <i class="fas fa-coins"></i>
                                         </button>
-									</h5>
-								</div>
+								</h5>
+							</div>
 
-								<div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
-									<div class="card-body">
-										<form>
-											<P class="small-print-text py-0">any option marked with an * is required.
-											</P>
-											<p id="yearly-salary">Input your yearly salary here*</p>
-											<div class="font-icon-div">
+							<div id="collapse-income" class="collapse show" aria-labelledby="heading-income">
+								<div class="card-body">
+									<form>
+										<P class="small-print-text py-0">any option marked with an * is required.
+										</P>
+										<p id="yearly-salary">Input your yearly salary here*</p>
+										<div class="font-icon-div">
 
-												<i id="euro-symbol" class="fas fa-euro-sign"></i>
-												<input id="income-input" type="text" name="income-per-year" value="" required>
+											<i id="euro-symbol" class="fas fa-euro-sign"></i>
+											<input id="income-input" type="text" name="income-per-year" value="" required>
                                             </div>
-												<br><span class="required-message"></span>
-												<p>Please Choose an option</p>
-												<div class="font-icon-div">
-													<i class="far fa-question-circle"></i>
-													<select id="drop-down">
+											<br><span class="required-message"></span>
+											<p>Please Choose an option</p>
+											<div class="font-icon-div">
+												<i class="far fa-question-circle"></i>
+												<select id="drop-down">
                                                     <option id="blank" value="">Marital Status*</option>
                                                     <option id="single-option" value="single">Single</option>
                                                     <option id="married-option" value="married">Married</option>
                                                     <option id="civil-partner-option" value="civil-partner">Civil Partner</option>
                                                 </select>
-												</div>
-												<br><span class="required-message-dropdown"></span>
-												<input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate Tax">
-												<p class="font-size">
-													<span class="make-red"><i class="fas fa-money-bill-wave-alt"></i></span>
-													<span id="income-tax-output">Taxed Amount Output</span></p>
-												<p class="font-size"><i class="fas fa-money-bill-wave-alt"></i>
-													<span id="net-pay">Net Pay Output</span></p>
-												<p class="font-size"><i class="fas fa-money-bill-wave-alt"></i>
-													<span id="weekly-pay">Weekly Pay Output</span></p>
-										</form>
-									</div>
+											</div>
+											<br><span class="required-message-dropdown"></span>
+											<input id="income-taxed-btn" type="button" name="calculate-income-tax" value="Calculate Tax">
+											<p class="font-size">
+												<span class="make-red"><i class="fas fa-money-bill-wave-alt"></i></span>
+												<span id="income-tax-output">Taxed Amount Output</span></p>
+											<p class="font-size"><i class="fas fa-money-bill-wave-alt"></i>
+												<span id="net-pay">Net Pay Output</span></p>
+											<p class="font-size"><i class="fas fa-money-bill-wave-alt"></i>
+												<span id="weekly-pay">Weekly Pay Output</span></p>
+									</form>
 								</div>
 							</div>
 						</div>
@@ -115,71 +113,69 @@
 
 	<!-- Mpg Calc Apps Section  -->
 	<section>
-		<div class="fixed">
-			<div class="container-fluid">
-				<div class="row mx-0">
-					<div class="col-xs-12 col-lg-12 px-0">
-						<div id="accordion2">
-							<div class="card">
-								<div class="card-header" id="headingTwo">
-									<h5 class="mb-0">
-										<button id="mpg-calc" class="mpg-calc-btn btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		<div class="container-fluid">
+			<div class="row mx-0">
+				<div class="col-xs-12 col-lg-12 px-0">
+					<div id="accordion2">
+						<div class="card">
+							<div class="card-header" id="heading-mpg">
+								<h5 class="mb-0">
+									<button id="mpg-calc" class="mpg-calc-btn btn btn-link" data-toggle="collapse" data-target="#collapse-mpg" aria-expanded="false" aria-controls="collapse-mpg">
                                             MPG FUEL CALCULATOR    <i class="fas fa-gas-pump"></i>
                                         </button>
-									</h5>
-								</div>
+								</h5>
+							</div>
 
-								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
-									<div class="card-body">
+							<div id="collapse-mpg" class="collapse" aria-labelledby="heading-mpg">
+								<div class="card-body">
 
-										<form>
-											<P class="small-print-text py-0">any option marked with an * is required.
-											</P>
-											<p id="miles-or-kms">Input your your miles/kms here: </p>
+									<form>
+										<P class="small-print-text py-0">any option marked with an * is required.</P>
+										<p id="miles-or-kms">Input your your miles/kms here: </p>
+										<div class="font-icon-div">
+											<i class="fas fa-road"></i>
+											<input id="miles-or-kms-traveled" type="text" name="miles-traveled" value="" required>
+                                        </div>
+											<br><span class="required-mpg-distance"></span>
+
+											<p>Please Choose an option</p>
 											<div class="font-icon-div">
-												<i class="fas fa-road"></i>
-												<input id="miles-or-kms-traveled" type="text" name="miles-traveled" value="" required>
+												<i class="far fa-question-circle"></i>
+												<select id="drop-down1">
+                                                <option id="blank2" value="">Miles or Kilometers*</option>
+                                                <option id="kms-option" value="kms">Kilometers</option>
+                                                <option id="miles-option" value="miles">Miles</option>
+                                            </select>
+											</div>
+											<br><span class="required-measurement-distance"></span>
+
+											<p id="fuel-used">Fuel used in litres</p>
+											<div class="font-icon-div">
+												<i class="fas fa-gas-pump"></i>
+												<input id="litres-input" type="text" name="fuel-used-litres" required value="" />
                                             </div>
-												<br><span class="required-mpg-distance"></span>
+												<br><span class="required-litres"></span>
 
-												<p>Please Choose an option</p>
-												<div class="font-icon-div">
-													<i class="far fa-question-circle"></i>
-													<select id="drop-down1">
-                                                    <option id="blank2" value="">Miles or Kilometers*</option>
-                                                    <option id="kms-option" value="kms">Kilometers</option>
-                                                    <option id="miles-option" value="miles">Miles</option>
-                                                </select>
-												</div>
-												<br><span class="required-measurement-distance"></span>
-
-												<p id="fuel-used">Fuel used in litres</p>
-												<div class="font-icon-div">
-													<i class="fas fa-gas-pump"></i>
-													<input id="litres-input" type="text" name="fuel-used-litres" required value="" />
-                                            </div>
-													<br><span class="required-litres"></span>
-
-													<div class="radio-buttons">
-														<i class="fas fa-globe"></i>
-														<div class="btn-group btn-group-toggle" data-toggle="buttons">
-															<label class="uk-mpg btn btn-secondary">
-                                                        <input checked type="radio" name="options" id="option1" value="checked"> UK MPG
-                                                    </label>
-															<label class="us-mpg btn btn-secondary">
-                                                        <input type="radio" name="options" id="option2" value=""> US MPG
-                                                    </label>
-															<span id="mpg-span">UK/US Gallons*</span>
-														</div>
+												<div class="radio-buttons">
+													<i class="fas fa-globe"></i>
+													<div class="btn-group btn-group-toggle" data-toggle="buttons">
+													    <label class="uk-mpg btn btn-secondary">
+                                                            <input checked type="radio" name="options" id="option1" value="checked"> UK MPG
+                                                        </label>
+														<label class="us-mpg btn btn-secondary">
+                                                            <input type="radio" name="options" id="option2" value=""> US MPG
+                                                        </label>
+														<span id="mpg-span">UK/US Gallons*</span>
 													</div>
+												</div>
 
-													<input id="calc-mpg-btn" type="button" name="calc-mpg-achieved" value="Calculate mpg achieved">
-													<p id="mpg-achieved">
-														<span class="make-red"><i class="fas fa-car"></i></span><span id="mpg-text">Miles/Kms</span>
-														per gallon: <span id="mpg-output"></span></p>
-										</form>
+												<input id="calc-mpg-btn" type="button" name="calc-mpg-achieved" value="Calculate mpg achieved">
+												<p id="mpg-achieved">
+													<span class="make-red"><i class="fas fa-car"></i></span><span id="mpg-text">Miles/Kms</span>
+													per gallon: <span id="mpg-output"></span>
+												</p>
+									</form>
 
-									</div>
 								</div>
 							</div>
 						</div>
