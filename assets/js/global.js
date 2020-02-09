@@ -8,75 +8,29 @@ $(".navbar-color-button").click(function() {
 //income tax clac collapse content.
 $(".tab-decoration").click(function() {
 
-    let mpgContent = $("#collapseTwo");
-
-    toggleCalcContent($("#mpg-calc"), mpgContent);
+    toggleAccordian($('#collapseOne'), $('#collapseTwo'));
 
 });
 
 //mpg calc change collapse content.
 $(".tab-decoration2").click(function() {
 
-    let incomeTaxContent = $("#collapseOne");
-
-    toggleCalcContent($("#income-tax"), incomeTaxContent);
-    keepMpgOpen();
+    toggleAccordian($('#collapseTwo'), $('#collapseOne'));
 
 });
 
-//Keeps one content section open at all times.
-function toggleCalcContent(calc, content) {
+//toggles content to keep one section open.
+function toggleAccordian(selectedElement, otherElement) {
 
-    let otherCalc;
+    if (selectedElement.hasClass('show') === true) {
 
-    if (calc == $("#mpg-calc")) {
-
-        otherCalc = $("#income-tax");
+        otherElement.collapse('show');
 
     }
     else {
 
-        otherCalc = $("#mpg-calc");
+        otherElement.collapse('hide');
 
-    }
-
-    if (calc.attr('aria-expanded') == "true") {
-
-        if (otherCalc.attr('aria-expanded') == "false") {
-
-            otherCalc.attr('aria-expanded', 'true');
-            otherCalc.removeClass("collapsed");
-            content.addClass("show");
-                
-        }
-
-    }
-    if (calc.attr('aria-expanded') == "true" && otherCalc.attr('aria-expanded') == "true") {
-
-        otherCalc.attr('aria-expanded', 'false');
-        otherCalc.addClass("collapsed");
-        content.removeClass("show");
-
-    }
-    else if (calc.attr('aria-expanded') == "false" && otherCalc.attr('aria-expanded') == "false") {
-
-        otherCalc.attr('aria-expanded', 'true');
-        otherCalc.removeClass("collapsed");
-        content.addClass("show");
-
-    }
-
-}
-
-// Keeps mpg open.
-function keepMpgOpen() {
-
-    if ($("#mpg-calc").attr('aria-expanded') == "false" || $("#income-tax").attr('aria-expanded') == "false") {
-
-        $("#mpg-calc").attr('aria-expanded', 'true');
-        $("#mpg-calc").removeClass("collapsed");
-        $("#collapseOne").addClass("show");
-        
     }
 
 }
